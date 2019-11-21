@@ -1,0 +1,52 @@
+
+
+
+
+
+#yearselector,#monthselector{
+   
+    width: 320px;
+    height: 80px;
+    border-bottom: solid red ;
+}
+
+
+
+#plussyear,#monthpluss{
+    position: relative;
+    top: -120px;
+    left: 215px;
+}
+
+#minusyear{position: relative;
+    top: 3px;}
+
+#yearheader,#monthheader{
+    position: relative;
+    bottom:40px;
+}
+
+#daycontainer{
+    margin: auto;
+width: 300px;
+height: 130px;
+overflow: scroll;
+border-spacing: 20px;
+
+
+
+}
+
+.datediv{
+    display:table-cell;
+    width: 130px;
+    height: 80px;
+    font-size: 50px;
+    
+ 
+    border: solid black ;
+   
+
+    
+    
+}

@@ -1,0 +1,77 @@
+#headline{
+    margin:0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    width: 310px;
+    text-align: center;
+ }
+
+
+
+
+.routerContainer{
+    
+    font-size: 100%;
+    width: 225px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5%;
+    padding: 10px;
+    background-color: #A42751;
+    margin-top: 5%;
+    text-align: center;
+    align-self: auto; 
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 2px);
+    z-index: 0;
+    scale:1;
+}
+.routerContainer:hover{
+    background-color: #75051B;
+}
+.elLink{
+    text-decoration: none;
+    color: #ffffff; 
+}
+
+.Images{
+ position: fixed;
+    top:1px;
+    right: 5px;
+    width: 35px;
+    z-index: 100;
+   
+}
+
+
+
+.testPopup{
+    background-color: #e1ecf1;
+    border-radius: 5%;
+    border-color: solid #a42751;
+    text-align: center;
+    width: 310px;
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    color: black; 
+}
+
+#Popup1{
+    top: 200px;
+   
+#Popup2{
+    top: 280px; 
+}
+#Popup3{
+    top: 380px;
+}
+#Popup4{
+    top: 450px;
+}
+

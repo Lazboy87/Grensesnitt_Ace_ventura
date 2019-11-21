@@ -1,0 +1,44 @@
+
+
+#pageimg{
+    width: 50%;
+    align-self: auto;
+}
+
+
+
+.timetable {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    width: 300px;
+}
+
+.headerText {
+    text-align: center;
+}
+
+.time {
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    margin: 1%;
+    width: 25%;
+    border: 1px solid #464646;
+    border-radius: 5px;
+    height: 30px;
+    background-color: #A42751;
+    cursor: pointer;
+}
+
+div.time:hover {
+    background-color: #75051B;
+}
+
+p {
+    margin: 6px;
+}
