@@ -1,4 +1,4 @@
-export default{
+const contactInfo={
     template:`
     
     <div id="container">
@@ -27,3 +27,4 @@ export default{
 </div>
     `
     };
+    export default contactInfo;
