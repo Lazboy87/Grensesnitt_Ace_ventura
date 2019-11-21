@@ -4,7 +4,15 @@ const timePage={
    <div class="container">
          <link rel="stylesheet" href="pages/time.css">
       
-         <img id="logo" src="/logo.png">
+         <img id="logo" src="pages/Images/Studentklinikk logo.png">
+  
+         <div id="iddiv">
+         <img id="idimg" src="pages/Images/ID.png">
+          <p id="textuser">Bruker:<br>{{user}}</p>
+     
+         
+         
+        </div>
      
       <div class="headerText">
          <h1>Velg Ønsket Tidspunkt</h1>

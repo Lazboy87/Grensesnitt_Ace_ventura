@@ -74,6 +74,7 @@ template:`
 </div>`,
 data(){
     return{
+        user:userdata.theuser[0].username,
         monthcounter:1,
         yearcounter:2019,
         month:"Januar",
@@ -81,11 +82,7 @@ data(){
         dayvalue:"",
         yearvalue:"",
 
-        
-        
-
        
-        //user:userdata.theuser[0].username,
     }
 },
 methods:{
