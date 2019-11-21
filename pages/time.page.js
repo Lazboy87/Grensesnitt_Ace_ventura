@@ -2,7 +2,7 @@ const timePage={
    template:`
   
    <div class="container">
-         <link rel="stylesheet" href=""pages/time.css">
+         <link rel="stylesheet" href="pages/time.css">
       
          <img id="logo" src="/logo.png">
      
