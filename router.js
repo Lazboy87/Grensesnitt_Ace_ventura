@@ -5,7 +5,7 @@ import datePage from "./pages/date.page.js";
 import contactInfo from "./pages/contactinfo.page.js";
 import logginnPage from "./pages/logginn.page.js";
 import mypage from "./pages/myPage.page.js";
-import app from "./app.js";
+import app from "/app.js";
 
 
 
