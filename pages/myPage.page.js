@@ -30,7 +30,7 @@ const startPage ={
     <div id="ordercontainer">f</div>
 
    
-    <button @click="back" class ="backbutton">Tilbake</button><br>
+    <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
     <img @click="linkloggout"  id="logoutimg" src="pages/Images/signout.png">
     <img id="logo2" src="pages/Images/logo.png">
 

@@ -32,7 +32,7 @@ text-align: center;}
 }
 
 #logo2{
-
+    margin-top: 10%;
     margin-right: auto;
     margin-left: auto;}
 
@@ -63,14 +63,16 @@ text-align: center;}
 #logoutimg{
 
     width: 60px;
-    margin-left: 81%;
+    margin-left: 70%;
     margin-top:-10% ;
-    
+     }
   
-   
 
-
- 
+    .backimg{
+        width: 60px;
+     margin-bottom: -10%;
+    margin-left: -70%;
+    margin-top:10% ;
     }
     .backbutton{
         text-align: center;
@@ -88,7 +90,6 @@ text-align: center;}
        
         
     }
-    
     
 
 

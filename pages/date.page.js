@@ -67,7 +67,7 @@ template:`
     </div>
  </div>
 
-    <button @click="back" class ="backbutton">Tilbake</button><br>
+ <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
     
     <img id="logo2" src="pages/Images/logo.png">
 
@@ -90,7 +90,7 @@ data(){
 },
 methods:{
     linkmypage:function(){locationmypage:this.$router.replace({ path: "/mypage" })},
-    back:function(){locationorder:this.$router.replace({ path: "/startpage" })},
+    back:function(){locationorder:this.$router.replace({ path: "/treatment" })},
     linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
     monthchk:function(){switch(this.monthcounter){
         case 1:

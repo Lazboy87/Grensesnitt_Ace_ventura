@@ -4,6 +4,18 @@ const contactInfo ={
     <div id="container">
     <link rel="stylesheet" type="text/css" href="pages/contactinfo.css">
 
+    
+    <br>
+    <br>
+    <h2> Noe du lurer på?</h2>
+    <p> Send oss en melding!</p>
+    <textarea rows="16" cols="100" placeholder="Skriv her!"></textarea>
+   
+    <br>
+    
+    <button type="button"> Send </button>
+    <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
+
     <h1> Kontaktinformasjon </h1>
     <br> 
     <h2> Tlf: </h2>
@@ -15,15 +27,6 @@ const contactInfo ={
     <div id="adressebilde"> 
         <img src="pages/Images/adresse.png" alt="adressebilde">
     </div>
-    <br>
-    <br>
-    <h2> Noe du lurer på?</h2>
-    <p> Send oss en melding!</p>
-    <textarea rows="16" cols="100" placeholder="Skriv her!"></textarea>
-   
-    <br>
-    
-    <button type="button"> Send </button>
 </div>
     `,
     
@@ -37,6 +40,7 @@ const contactInfo ={
        }
    },
    methods:{
+    back:function(){locationorder:this.$router.replace({ path: "/time" })},
        
    }
     };

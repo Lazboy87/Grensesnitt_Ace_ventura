@@ -8,7 +8,7 @@ const treatmentPage={
     <img  @click="linkmypage" id="idimg" src="pages/Images/ID.png">
      <p id="textuser">Bruker:<br>{{user}}</p>
 
-     <img @click="linkloggout"  id="logoutimg" src="pages/Images/signout.png">
+     
      </div>
   
         <h1 id="headline" class="hTag">Velg Behandling</h1>
@@ -60,7 +60,7 @@ const treatmentPage={
             <p v-if="seen4"><img src="informasjon informasjon"></p>
             </div>
            
-            <button @click="back" class ="backbutton">Tilbake</button><br>
+            <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
             <img id="logo2" src="pages/Images/logo.png">
     </div>
     `,

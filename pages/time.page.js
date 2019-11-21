@@ -34,6 +34,9 @@ const timePage={
          <router-link to="/contactinfo" tag="div" class="time"><p>18:00</p></router-link>
          <router-link to="/contactinfo" tag="div" class="time"><p>18:30</p></router-link>
       </div>
+
+      <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
+      <img id="logo2" src="pages/Images/logo.png">
    </div>
    `
       ,
@@ -48,7 +51,7 @@ const timePage={
      },
      methods:{
          linkmypage:function(){locationmypage:this.$router.replace({ path: "/mypage" })},
-         linkorder:function(){locationorder:this.$router.replace({ path: "/treatment" })},
+         back:function(){locationorder:this.$router.replace({ path: "/date" })},
          linkloggout:function(){locationorder:this.$router.replace({ path: "/" })}
      }
      };
