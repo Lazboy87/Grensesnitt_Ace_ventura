@@ -5,7 +5,7 @@ const treatmentPage={
     <img id="logo" src="pages/Images/Studentklinikk logo.png">
     
     <div id="iddiv">
-    <img  @click="linkmypage" id="idimg" src="pages/Images/Id.png">
+    <img  @click="linkmypage" id="idimg" src="pages/Images/ID.png">
      <p id="textuser">Bruker:<br>{{user}}</p>
 
      <img @click="linkloggout"  id="logoutimg" src="pages/Images/signout.png">
@@ -61,7 +61,7 @@ const treatmentPage={
             </div>
            
             <button @click="back" class ="backbutton">Tilbake</button><br>
-            <img id="logo2" src="/logo.png">
+            <img id="logo2" src="pages/Images/logo.png">
     </div>
     `,
     data(){

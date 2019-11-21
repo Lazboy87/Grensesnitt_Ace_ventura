@@ -10,7 +10,7 @@ const startPage ={
     
     <img id="logo" src="pages/Images/Studentklinikk logo.png">
     <div id="iddiv">
-    <img  @click="linkmypage" id="idimg" src="pages/Images/Id.png">
+    <img  @click="linkmypage" id="idimg" src="pages/Images/ID.png">
      <p id="textuser">Bruker:<br>{{user}}</p>
 
      
@@ -26,7 +26,7 @@ const startPage ={
     <button @click="linkorder" class ="linkbutton">Bestilling</button>
     
     
-    <img id="logo2" src="/logo.png">
+    <img id="logo2" src="pages/Images/logo.png">
   
     
    

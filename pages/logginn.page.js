@@ -56,7 +56,7 @@ const logginnPage ={
 
 
     </form>
-    <img id="logo2" src="/logo.png">
+    <img id="logo2" src="pages/Images/logo.png">
 
  </div>
     `,
