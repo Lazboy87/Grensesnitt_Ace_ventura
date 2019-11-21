@@ -1,1 +1,1 @@
-module.exports = { baseUrl: "/logginn.page.js" }
+//module.exports = { baseUrl: "/logginn.page.js" }
