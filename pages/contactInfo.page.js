@@ -13,7 +13,7 @@ const contactInfo={
     <h2> Adresse: </h2>
     <p> Prinsens gate 9, 0153 Oslo </p>
     <div id="adressebilde"> 
-        <img src="Images/adresse.png" alt="adressebilde">
+        <img src="pages/Images/adresse.png" alt="adressebilde">
     </div>
     <br>
     <br>
