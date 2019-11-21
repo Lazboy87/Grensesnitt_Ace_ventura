@@ -9,7 +9,7 @@ const startPage ={
     <img id="logo" src="pages/Images/Studentklinikk logo.png">
   
     <div id="iddiv">
-    <img id="idimg" src="pages/Images/Id.png">
+    <img id="idimg" src="pages/Images/ID.png">
      <p id="textuser">Bruker:<br>{{user}}</p>
 
     
@@ -32,7 +32,7 @@ const startPage ={
    
     <button @click="back" class ="backbutton">Tilbake</button><br>
     <img @click="linkloggout"  id="logoutimg" src="pages/Images/signout.png">
-    <img id="logo2" src="/logo.png">
+    <img id="logo2" src="pages/Images/logo.png">
 
 </div>
     `,
