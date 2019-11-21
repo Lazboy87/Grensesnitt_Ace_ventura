@@ -1,4 +1,4 @@
-const contactInfo={
+const contactInfo ={
     template:`
     
     <div id="container">
@@ -25,6 +25,19 @@ const contactInfo={
     
     <button type="button"> Send </button>
 </div>
-    `
+    `,
+    
+       
+       
+    data(){
+       return{
+           
+           
+
+       }
+   },
+   methods:{
+       
+   }
     };
     export default contactInfo;
