@@ -2,7 +2,7 @@ import startPage from "./pages/startPage.page.js";
 import timePage from "./pages/time.page.js";
 import treatmentPage from "./pages/treatment.page.js";
 import datePage from "./pages/date.page.js";
-import contactInfo from "./pages/contactinfo.page.js";
+import contactInfo from "./pages/contactInfo.page.js";
 import logginnPage from "./pages/logginn.page.js";
 import mypage from "./pages/myPage.page.js";
 
