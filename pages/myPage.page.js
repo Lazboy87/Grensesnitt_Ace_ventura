@@ -26,8 +26,8 @@ const startPage ={
     <p> {{email}}</p>
     <br>
     </div>
-    <h3> Mine timer: </h3>
-    <div id="ordercontainer">f</div>
+    <h3 @click="createorderdiv"> Mine timer: </h3>
+    <div  id="ordercontainer"></div>
 
    
     <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
@@ -41,9 +41,10 @@ const startPage ={
 data(){ 
     return  {
         user:"",
-        fullname:userdata.theuser[0].firstname+" "+userdata.theuser[0].lastname,
-        phone:userdata.theuser[0].phone,
-        email:userdata.theuser[0].email,
+        fullname:"",
+        phone:"",
+        email:"",
+        id:"",
             }
     },
     methods: {
@@ -53,17 +54,73 @@ data(){
         setuser:function(){
             if (userdata.theuser[0] == null){
                 this.user="defaultuser";
-            }else{this.user= userdata.theuser[0].username}
-      
-       
-       
+                this.fullname="";
+                this.phone="";
+                this.email="";
+                
 
-            }
+            }else{this.user= userdata.theuser[0].username;
+                this.fullname=userdata.theuser[0].firstname+" "+userdata.theuser[0].lastname;
+                this.phone=userdata.theuser[0].phone;
+                this.email=userdata.theuser[0].email;
+                }},
+
+               
+
+               
+
+                
+
+               
+            createorderdiv:function(){
+              
+                var order;
+                for (var i = 0; i < userdata.orders.length; i++) {
+                    var id=userdata.orders[i].id;
+                    
+                    var treatment=userdata.orders[i].treatment;
+                    var time=userdata.orders[i].time;
+                    var date=userdata.orders[i].date;
+
+                    order = document.createElement('div');
+                    order.setAttribute("class", "orders");
+                    order.setAttribute("id", id);
+                   order.innerHTML = "<h5 class=treatH>Behandling: "+treatment+"</h5>"+
+                   "<h5 class=timeH>Tid: "+time+"</h5>"+
+                    "<h5 class=dateH>Dato: "+date+"</h5>"+
+                    "<img class=imgdelete id=img"+id+" src=pages/Images/delete.png>";
+                    
+                    
+                    console.log( userdata.orders[i].treatment);
+                   var appendto=document.getElementById("ordercontainer");
+                   console.log(appendto);
+                   appendto.appendChild(order);
+
+                   
+                    /*var element=document.getElementsByClassName('imgdelete');
+                    element.addEventListener("click", function(){ alert("Hello World!"); });*/
+                    
+                    
+                
+                    
+                }
+
+
+
+
+
+            },
+
+           
 
     },
     beforeMount(){
         this.setuser()
-     },
+       },
+       mounted() {
+           this.createorderdiv(),
+           this.eventlistner()
+       }
     
-};
+    };
     export default startPage;

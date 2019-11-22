@@ -27,7 +27,7 @@ Akupunktur er en persontilpasset behandling der diagnostikk, behandling og oppf�
 • Lettere angst og depresjon 
 • Stress 
 • Allergi
- • Kvinners Helse
+• Kvinners Helse
 • Fordøyelses Problematikk 
 • Søvnproblemer 
 
