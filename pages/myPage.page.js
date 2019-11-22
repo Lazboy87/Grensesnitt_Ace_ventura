@@ -27,6 +27,7 @@ const startPage ={
     <br>
     </div>
     <h3 @click="createorderdiv"> Mine timer: </h3>
+    <button @click="" id="cancelorder" class ="backbutton">Avbestill En Time</button>
     <div  id="ordercontainer"></div>
 
    
@@ -88,7 +89,7 @@ data(){
                    order.innerHTML = "<h5 class=treatH>Behandling: "+treatment+"</h5>"+
                    "<h5 class=timeH>Tid: "+time+"</h5>"+
                     "<h5 class=dateH>Dato: "+date+"</h5>"+
-                    "<img class=imgdelete id=img"+id+" src=pages/Images/delete.png>";
+                    
                     
                     
                     console.log( userdata.orders[i].treatment);
@@ -96,14 +97,7 @@ data(){
                    console.log(appendto);
                    appendto.appendChild(order);
 
-                   
-                    /*var element=document.getElementsByClassName('imgdelete');
-                    element.addEventListener("click", function(){ alert("Hello World!"); });*/
-                    
-                    
-                
-                    
-                }
+                   }
 
 
 

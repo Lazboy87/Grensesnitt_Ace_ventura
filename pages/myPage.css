@@ -13,8 +13,9 @@
     width: 310px;
     height: 200px;
     border:solid #A42751;
-    background:  #ffffff;
+     background:  rgba(164, 39, 81, 0.671) ;
     overflow:auto;
+    border-radius: 5%;
 }
 
 .orders{
@@ -22,19 +23,23 @@
     height: 70px;
     text-align: left;
     border: solid #A42751;
+    background: #FFFFFF;
     margin-left: auto;
     margin-right:auto ;
     margin-bottom: 10px;
     margin-top: 10px;
     display: inline block;
     overflow: hidden;
+    border-radius: 5%;
 }
 
 .treatH,.timeH,.dateH{
     margin:5px;
 }
-.imgdelete{width: 50px;
-position: relative;
-top:-65px;
-left: 195px;
-margin: 0;}
+
+
+#cancelorder{
+    width: 100%;
+    margin-top: -10%;
+    margin-bottom:5%;
+}

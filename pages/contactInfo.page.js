@@ -93,7 +93,18 @@ const contactInfo ={
             },
 
             confirmorder:function(){
-               const order={treatment:this.treatment,
+                
+                var id;
+                for (let i = 0; i < userdata.orders.length; i++) {
+                    id = userdata.orders[i].id +1;
+                    
+                }
+               
+                
+               const order={   
+
+                        id:id,
+                        treatment:this.treatment,
                         date:this.date,
                         time:this.time,
                         message:this.message}
@@ -104,7 +115,7 @@ const contactInfo ={
                 console.log(userdata.orders);
                 this.$router.replace({ path: "/mypage" });
 
-                },
+             },
     
     
         setuser:function(){
