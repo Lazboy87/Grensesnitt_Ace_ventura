@@ -4,14 +4,28 @@
 }
 
 
-#txtfromuser{
+#txtfromuser,#messagebox{
     width: 250px;
+    height: 100px;
     margin-left: auto;
     margin-right: auto;
     border: solid #A42751;
+    overflow: scroll;
 }
 #orderbutton{
     text-align: center;
     margin:auto;
     
 }
+#confirmdiv{
+    width: 315px;
+    text-align: left;
+
+}
+
+#abortConfirm,#confirmOrder{position: relative;}
+#confirmOrder{
+   right:-208px;
+   top:-60px;
+}
+

@@ -1,7 +1,7 @@
 const timePage={
    template:`
   
-   <div class="container">
+   <div id="container">
          <link rel="stylesheet" href="pages/time.css">
       
          <img id="logo" src="pages/Images/Studentklinikk logo.png">
@@ -70,19 +70,25 @@ const timePage={
            this.$router.replace({ path: "/contactinfo" });
            },
          
-         
-         
-         
-         
-         
          setuser:function(){
             if (userdata.theuser[0] == null){
                 this.user="defaultuser";
             }else{this.user= userdata.theuser[0].username}
-        }
-     },
+
+            
+        },
+
+        
+
+
+
+
+
+      },
      beforeMount(){
       this.setuser()
+      
+
    },
      };
      export default timePage;
