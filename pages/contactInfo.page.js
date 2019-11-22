@@ -24,7 +24,7 @@ const contactInfo ={
    
 
     <h3> Kontaktinformasjon </h3>
-    <br> 
+   
     <h4> Tlf: </h4>
     <p> 971 17 690</p>
     <h4> E-post: </h4>
@@ -50,7 +50,15 @@ const contactInfo ={
    methods:{
     back:function(){locationorder:this.$router.replace({ path: "/time" })},
     order:function(){console.log(this.textusr)},
+    setuser:function(){
+        if (userdata.theuser[0] == null){
+            this.user="defaultuser";
+        }else{this.user= userdata.theuser[0].username}
+    }
        
-   }
+   },
+   beforeMount(){
+    this.setuser()
+ },
     };
     export default contactInfo;

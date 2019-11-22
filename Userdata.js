@@ -1,11 +1,23 @@
 
 var userdata={
     theuser:[],
-    order:{
-        treatment:"",
-        time:"",
-        date:"",
-        message:"",},
-        orders:[]
+    ordertemp:{
+            treatment:"",
+            time:"",
+            date:"",
+            message:"",},
+    orders:[],
+
+    users: [{
+        firstname:"Lasse",
+        lastname:"Hovden",
+        phone:"9000000",
+        email:"lasse@lasse.com",
+        Cusername:"lasse",
+        Cpassword:"lasse"}],
+       
         
 };
+ 
+     
+    

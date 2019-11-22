@@ -15,32 +15,29 @@ const timePage={
         </div>
      
       <div class="headerText">
-         <h1>Velg Ønsket Tidspunkt</h1>
+         <h2>Velg Ønsket Tidspunkt:</h2>
       </div>
       <div class="timetable">
-         <router-link to="/contactinfo" tag="div" class="time"><p>7:30</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>8:30</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>9:00</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>8:00</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>9:30</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>10:00</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>10:30</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>11:00</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>11:30</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>12:00</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>12:30</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>13:00</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>13:30</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>14:00</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>14:30</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>15:00</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>15:30</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>16:00</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>16:30</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>17:00</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>17:30</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>18:00</p></router-link>
-         <router-link to="/contactinfo" tag="div" class="time"><p>18:30</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="7:30" class="time"><p>7:30</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="8:30" class="time"><p>8:30</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="9:00" class="time"><p>9:00</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="8:00" class="time"><p>8:00</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="9:30" class="time"><p>9:30</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="10:00" class="time"><p>10:00</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="10:30" class="time"><p>10:30</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="11:00" class="time"><p>11:00</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="11:30" class="time"><p>11:30</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="12:00" class="time"><p>12:00</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="12:30" class="time"><p>12:30</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="13:00" class="time"><p>13:00</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="13:30" class="time"><p>13:30</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="14:00" class="time"><p>14:00</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="14:30" class="time"><p>14:30</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="15:00" class="time"><p>15:00</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="15:30" class="time"><p>15:30</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="16:00" class="time"><p>16:00</p></router-link>
+         <router-link to="/contactinfo" tag="div" id="16:30" class="time"><p>16:30</p></router-link>
+         
       </div>
 
       <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
@@ -53,14 +50,22 @@ const timePage={
       data(){
          return{
              
-             
+            user:"", 
  
          }
      },
      methods:{
          linkmypage:function(){locationmypage:this.$router.replace({ path: "/mypage" })},
          back:function(){locationorder:this.$router.replace({ path: "/date" })},
-         linkloggout:function(){locationorder:this.$router.replace({ path: "/" })}
-     }
+         linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
+         setuser:function(){
+            if (userdata.theuser[0] == null){
+                this.user="defaultuser";
+            }else{this.user= userdata.theuser[0].username}
+        }
+     },
+     beforeMount(){
+      this.setuser()
+   },
      };
      export default timePage;

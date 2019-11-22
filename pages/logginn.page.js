@@ -73,14 +73,6 @@ data(){
             passwordinp:"",
          
 
-            users: [{
-            firstname:"Lasse",
-            lastname:"Hovden",
-            phone:"9000000",
-            email:"lasse@lasse.com",
-            Cusername:"lasse",
-            Cpassword:"lasse"}],
-           
             firstname:"",
             lastname:"",
             phone:"",
@@ -107,7 +99,7 @@ data(){
                },
 
                clickregister: function(){
-                this.users.push(
+                userdata.users.push(
                     {firstname:this.firstname,
                     lastname:this.lastname,
                     phone:this.phone,
@@ -115,7 +107,7 @@ data(){
                     Cusername:this.Cusername,
                     Cpassword:this.Cpassword
                     });  
-                    console.log(this.users);
+                    console.log(userdata.users);
                     this.hidelogin="";
                 this.hidenewform="none";
                 },
@@ -124,16 +116,17 @@ data(){
                     var passwordchk =false;
                     const password=this.passwordinp;
                     const username=this.usernameinp;
-                    for (var i = 0; i <  this.users.length; i++) {
+                    for (var i = 0; i < userdata.users.length; i++) {
 
-                        if(this.users[i].Cusername==username && this.users[i].Cpassword==password){
+                        if(userdata.users[i].Cusername==username && userdata.users[i].Cpassword==password){
                             usernamechk = true;
                             passwordchk = true;
-                            const user={firstname:this.users[i].firstname,
-                                        lastname:this.users[i].lastname,
-                                        phone:this.users[i].phone,
-                                        email:this.users[i].email,
-                                        username:this.users[i].Cusername
+                            const user={firstname:userdata.users[i].firstname,
+                                        lastname:userdata.users[i].lastname,
+                                        phone:userdata.users[i].phone,
+                                        email:userdata.users[i].email,
+                                        username:userdata.users[i].Cusername,
+                                     
                                         }
                             userdata.theuser.push(user);
                            console.log(userdata.theuser);

@@ -74,7 +74,7 @@ template:`
 </div>`,
 data(){
     return{
-        user:userdata.theuser[0].username,
+        user:"",
         monthcounter:1,
         yearcounter:2019,
         month:"Januar",
@@ -149,7 +149,7 @@ methods:{
         this.monthvalue = "12"
         break;
 
-}},
+        }},
     plussmonth:function(){
 
         this.monthcounter += 1;
@@ -169,10 +169,14 @@ methods:{
      },
 
      plussyear:function(){
-
+         
         this.yearcounter += 1;
-        if(this.yearcounter > 2021 ){
+        this.yearvalue = this.yearcounter.toString();
+        console.log(this.yearvalue);
+        if(this.yearcounter >= 2022 ){
             this.yearcounter=2019;
+            this.yearvalue = "2019";
+            console.log(this.yearvalue);
         }
         
      },
@@ -189,15 +193,24 @@ methods:{
      returnDay:function(){
          this.dayvalue = event.srcElement.id;
          this.$router.replace({ path: "/time" });
-         alert (this.dayvalue);}
+         userdata.ordertemp.time=this.dayvalue+"."+this.monthvalue+"."+this.yearvalue;
+        alert(userdata.ordertemp.time);
+        },
 
-     
+         setuser:function(){
+            if (userdata.theuser[0] == null){
+                this.user="defaultuser";
+            }else{this.user= userdata.theuser[0].username}
+        }
 
     
 
     
 
-}
+},
+beforeMount(){
+    this.setuser()
+ },
 };
 export default datePage;
 

@@ -13,7 +13,7 @@ const treatmentPage={
   
         <h1 id="headline" class="hTag">Velg Behandling</h1>
         
-        <div class="routerContainer">
+        <div @click="orderAku" class="routerContainer">
         <router-link to="/date" class="elLink">Akupunktur</router-link>
         <img v-on:click="seen = !seen" class="Images" id="img1" src="pages/Images/questionmark-noBackground.png"/>
         </div>
@@ -23,7 +23,7 @@ const treatmentPage={
             </p>
             </div>
         
-        <div class="routerContainer">
+        <div @click="orderOst" class="routerContainer">
         <router-link to="/date" class="elLink">Osteopati</router-link>
         <img v-on:click="seen2 = !seen2" class="Images" id="img2" src="pages/Images/questionmark-noBackground.png"/>
         </div>
@@ -31,7 +31,7 @@ const treatmentPage={
             <p v-if="seen2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
         
-        <div class="routerContainer">
+        <div @click="orderFyso" class="routerContainer">
         <router-link to="/date" class="elLink">Fysiologisk Testlab</router-link>
         <img v-on:click="seen3 = !seen3" class="Images" id="img3" src="pages/Images/questionmark-noBackground.png"/>
         </div>
@@ -52,7 +52,7 @@ const treatmentPage={
             fremgang og gir deg videre råd og tilpasning av mosjon og trening. .</p>
             </div>
         
-        <div class="routerContainer">
+        <div @click="orderKost" class="routerContainer">
         <router-link to="/date" class="elLink">Kostholdsveiledning</router-link>
         <img v-on:click="seen4 = !seen4" class="Images" src="pages/Images/questionmark-noBackground.png"/>
         </div>
@@ -71,17 +71,28 @@ const treatmentPage={
             seen2: false,
             seen3: false,
             seen4: false,
-            user:userdata.theuser[0].username,
+           user:"",
         }
     },
     methods:{
         linkmypage:function(){locationmypage:this.$router.replace({ path: "/mypage" })},
         back:function(){locationorder:this.$router.replace({ path: "/startpage" })},
-        linkloggout:function(){locationorder:this.$router.replace({ path: "/" })}
+        linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
+        orderAku:function(){userdata.ordertemp.treatment ="Akupunktur";console.log(userdata.ordertemp.treatment)},
+        orderOst:function(){userdata.ordertemp.treatment ="Osteopati";console.log(userdata.ordertemp.treatment)},
+        orderFyso:function(){userdata.ordertemp.treatment ="Fysiologisk Testlab";console.log(userdata.ordertemp.treatment)},
+        orderKost:function(){userdata.ordertemp.treatment ="Kostholdsveiledning";console.log(userdata.ordertemp.treatment)},
+        setuser:function(){
+            if (userdata.theuser[0] == null){
+                this.user="defaultuser";
+            }else{this.user= userdata.theuser[0].username}
+        },
 
-        
+    },
 
-    }
+    beforeMount(){
+        this.setuser()
+     },
     };
     export default treatmentPage;
 

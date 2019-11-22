@@ -40,8 +40,8 @@ const startPage ={
 
 data(){ 
     return  {
-        user:userdata.theuser[0].username,
-        fullname:userdata.theuser[0].firstname+""+userdata.theuser[0].lastname,
+        user:"",
+        fullname:userdata.theuser[0].firstname+" "+userdata.theuser[0].lastname,
         phone:userdata.theuser[0].phone,
         email:userdata.theuser[0].email,
             }
@@ -49,13 +49,21 @@ data(){
     methods: {
        
         back:function(){locationorder:this.$router.replace({ path: "/startpage" })},
-        linkloggout:function(){locationorder:this.$router.replace({ path: "/" })}
-       
+        linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
+        setuser:function(){
+            if (userdata.theuser[0] == null){
+                this.user="defaultuser";
+            }else{this.user= userdata.theuser[0].username}
       
        
        
 
-    }
+            }
+
+    },
+    beforeMount(){
+        this.setuser()
+     },
     
 };
     export default startPage;

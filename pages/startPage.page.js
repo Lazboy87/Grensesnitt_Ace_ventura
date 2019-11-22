@@ -36,17 +36,24 @@ const startPage ={
    
 data(){ 
    return  {
-     user:userdata.theuser[0].username,
+     user:"",
 
             }
     },
     methods: {
         linkmypage:function(){locationmypage:this.$router.replace({ path: "/myPage" })},
         linkorder:function(){locationorder:this.$router.replace({ path: "/treatment" })},
-        linkloggout:function(){locationorder:this.$router.replace({ path: "/" })}
-       
+        linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
+        setuser:function(){
+            if (userdata.theuser[0] == null){
+                this.user="defaultuser";
+            }else{this.user= userdata.theuser[0].username}
+        }
         
-    }
+    },
+    beforeMount(){
+        this.setuser()
+     },
     
 };
     export default startPage;
