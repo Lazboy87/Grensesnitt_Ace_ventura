@@ -89,6 +89,10 @@ data(){
                    order.innerHTML = "<h5 class=treatH>Behandling: "+treatment+"</h5>"+
                    "<h5 class=timeH>Tid: "+time+"</h5>"+
                     "<h5 class=dateH>Dato: "+date+"</h5>"+
+                    "<div class=delete>"+
+                    "<input class=checkbox value="+id+" type=checkbox id=inp"+id+" name=cancel>"+
+                    "<label for=cancel>Avbestill</label>"+
+                  "</div>";
                     
                     
                     
@@ -112,8 +116,8 @@ data(){
         this.setuser()
        },
        mounted() {
-           this.createorderdiv(),
-           this.eventlistner()
+           this.createorderdiv()
+           
        }
     
     };

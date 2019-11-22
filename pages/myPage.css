@@ -15,7 +15,7 @@
     border:solid #A42751;
      background:  rgba(164, 39, 81, 0.671) ;
     overflow:auto;
-    border-radius: 5%;
+    border-radius: 2%;
 }
 
 .orders{
@@ -42,4 +42,19 @@
     width: 100%;
     margin-top: -10%;
     margin-bottom:5%;
+}
+
+.delete{
+    position: relative;
+    text-align: center;
+   width: 50px;
+   font-size: 12px;
+   font-weight: 600;
+    
+    margin-top: auto;
+    top:-60px;
+    left:190px;
+
+    
+    
 }
