@@ -5,7 +5,7 @@ template:`
    
     <img id="logo" src="pages/Images/Studentklinikk logo.png">
   
-    <div id="iddiv">
+    <div @click="mypage" id="iddiv">
     <img id="idimg" src="pages/Images/ID.png">
      <p id="textuser">Bruker:<br>{{user}}</p>
 
@@ -86,7 +86,7 @@ data(){
     }
 },
 methods:{
-    linkmypage:function(){locationmypage:this.$router.replace({ path: "/mypage" })},
+   mypage:function(){locationmypage:this.$router.replace({ path: "/mypage" })},
     back:function(){locationorder:this.$router.replace({ path: "/treatment" })},
     linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
     monthchk:function(){switch(this.monthcounter){

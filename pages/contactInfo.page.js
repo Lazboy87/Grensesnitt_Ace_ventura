@@ -7,7 +7,7 @@ const contactInfo ={
     
     <img id="logo" src="pages/Images/Studentklinikk logo.png">
   
-    <div id="iddiv">
+    <div @click="mypage" id="iddiv">
     <img id="idimg" src="pages/Images/ID.png">
      <p id="textuser">Bruker:<br>{{user}}</p>
 
@@ -77,6 +77,7 @@ const contactInfo ={
    },
    methods:{
     back:function(){this.$router.replace({ path: "/time" })},
+    mypage:function(){this.$router.replace({ path: "/mypage" })},
     
     order:function(){
         userdata.ordertemp.message=this.textusr;
@@ -129,7 +130,6 @@ const contactInfo ={
     this.setuser(),
     this.settime(),
     this.setdate(),
-    this.setmessage(),
     this.settreatment()
  },
     };

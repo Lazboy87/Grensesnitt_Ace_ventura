@@ -10,7 +10,7 @@
     margin-left: auto;
     margin-right: auto;
     border: solid #A42751;
-    overflow: scroll;
+    overflow: auto;
 }
 #orderbutton{
     text-align: center;

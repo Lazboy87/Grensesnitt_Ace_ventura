@@ -6,7 +6,7 @@ const timePage={
       
          <img id="logo" src="pages/Images/Studentklinikk logo.png">
   
-         <div id="iddiv">
+         <div @click="mypage" id="iddiv">
          <img id="idimg" src="pages/Images/ID.png">
           <p id="textuser">Bruker:<br>{{user}}</p>
      
@@ -58,7 +58,7 @@ const timePage={
          }
      },
      methods:{
-         linkmypage:function(){locationmypage:this.$router.replace({ path: "/mypage" })},
+         mypage:function(){locationmypage:this.$router.replace({ path: "/mypage" })},
          back:function(){locationorder:this.$router.replace({ path: "/date" })},
          linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
          
