@@ -78,9 +78,9 @@ data(){
         monthcounter:1,
         yearcounter:2019,
         month:"Januar",
-        monthvalue:"",
-        dayvalue:"",
-        yearvalue:"",
+        monthvalue:"01",
+        dayvalue:"01",
+        yearvalue:"2019",
 
        
     }
@@ -193,8 +193,8 @@ methods:{
      returnDay:function(){
          this.dayvalue = event.srcElement.id;
          this.$router.replace({ path: "/time" });
-         userdata.ordertemp.time=this.dayvalue+"."+this.monthvalue+"."+this.yearvalue;
-        alert(userdata.ordertemp.time);
+         userdata.ordertemp.date=this.dayvalue+"."+this.monthvalue+"."+this.yearvalue;
+        alert(userdata.ordertemp.date);
         },
 
          setuser:function(){
