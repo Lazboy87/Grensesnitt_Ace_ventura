@@ -93,9 +93,16 @@ const contactInfo ={
             },
 
             confirmorder:function(){
-            
+               const order={treatment:this.treatment,
+                        date:this.date,
+                        time:this.time,
+                        message:this.message}
                 this.hideconfirm="none";
                 this.hidetxtinfo="";
+                userdata.orders.push(order);
+                
+                console.log(userdata.orders);
+                this.$router.replace({ path: "/mypage" });
 
                 },
     
