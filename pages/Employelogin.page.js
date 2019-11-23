@@ -8,12 +8,13 @@ const logginnPage ={
     <link rel="stylesheet" href="pages/logginn.css">
    
     <img id="logo" src="pages/Images/Studentklinikk logo.png">
-    
-    <h1 id="logginntxtH1">Logg inn:</h1>
+    <br>
+   <br>
+    <h2 id="logginntxtH1">Ansatt logg inn:</h2>
 
     
     
-   
+  
     <div id="logginndiv" v-bind:style="{'display':hidelogin}" >
         <form  class="loginform"  >
         
@@ -21,41 +22,15 @@ const logginnPage ={
         <input class="loginformfield" id="passloginn" type="password" v-model="passwordinp" placeholder="Passord" required><br>
        
         <input @click="loginn(user)" class="loginformfield" id="subloginn" type="submit" value="Logg inn">
-        <br>
-        <br>
-        <br>
-        <button @click="makenewuser" class="loginformfield" id="newuserbtn">Opprett Bruker</button>
+       
+        
         
         </form>
         
         </div>
        
-    <form class="newuserform" v-bind:style="{'display':hidenewform}" >
-    
-        <input class="newuserfield" id="newuserfirstname" type="text" 
-        v-model="firstname" placeholder="Navn" required><br>
-
-        <input class="newuserfield" id="newuserlastname" type="text" 
-        v-model="lastname" placeholder="Etternavn" required><br>
-
-        <input class="newuserfield" id="newuserphone" type="text" 
-        v-model="phone" placeholder="Mobilnummer" required><br>
-        
-        <input class="newuserfield" id="newusermail" type="text" 
-        v-model="email" placeholder="Epost" required><br>
-
-        <input class="newuserfield" id="newusername" type="text" 
-        v-model="Cusername" placeholder="Skriv ditt brukernavn" required><br>
-
-        <input class="newuserfield" id="newpassloginn" type="text" 
-        v-model="Cpassword" placeholder="Skriv ditt Passord" required><br>
-
-        <input @click="clickregister" class="newuserfield" id="register" type="submit" value="Registrer"><br>
-        
-        <button @click="abortmakenewuser" class="newuserfield" id="abort">Avbryt</button>
-
-
-    </form>
+   
+      
     <img id="logo2" src="pages/Images/logo.png">
 
  </div>
@@ -66,19 +41,13 @@ const logginnPage ={
 data(){ 
     
     return  {
-            hidenewform:"none",
-            hidelogin:"",
+         
             
            usernameinp:"",
             passwordinp:"",
          
 
-            firstname:"",
-            lastname:"",
-            phone:"",
-            email:"",
-            Cusername:"",
-            Cpassword:"",
+            
 
             }
 
@@ -88,29 +57,11 @@ data(){
     methods: {
                 
             
-                makenewuser: function() {
-                    this.hidelogin="none";
-                    this.hidenewform="";
-                },   
+                
                
-               abortmakenewuser: function() {
-                this.hidelogin="";
-                this.hidenewform="none";
-               },
+              
 
-               clickregister: function(){
-                userdata.users.push(
-                    {firstname:this.firstname,
-                    lastname:this.lastname,
-                    phone:this.phone,
-                    email:this.email,
-                    Cusername:this.Cusername,
-                    Cpassword:this.Cpassword
-                    });  
-                    console.log(userdata.users);
-                    this.hidelogin="";
-                this.hidenewform="none";
-                },
+              
                 loginn:function(){
                     var usernamechk =false;
                     var passwordchk =false;
@@ -135,7 +86,7 @@ data(){
                     }
                     
                     if(usernamechk==true && passwordchk ==true){
-                        this.$router.replace({ path: "/startpage" });
+                        this.$router.replace({ path: "/employePage" });
                     
                 }else{
                     alert("Feil Brukernavn eller Passord")}

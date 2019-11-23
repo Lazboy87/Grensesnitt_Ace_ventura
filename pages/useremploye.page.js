@@ -6,24 +6,21 @@ const startPage ={
     
     <div id = "container">
     
-    <link rel="stylesheet" href="pages/startPage.css">
+    <link rel="stylesheet" href="pages/useremploye.page.css">
     
     <img id="logo" src="pages/Images/Studentklinikk logo.png">
-    <div id="iddiv">
-    <img  @click="linkmypage" id="idimg" src="pages/Images/ID.png">
-     <p id="textuser">Bruker:<br>{{user}}</p>
-
+    
      
    
-    </div>
+
     
     
     
-    <h2 id="logginntxtH2">Hvor ønsker du å gå:</h2>
+    <h4 id="logginntxtH2">!!!Dette er bare en protal for Ansattsider eller brukerapp til bestilling av time:</h4>
    
 
-    <button @click="linkmypage" class ="linkbutton">Min Side</button><br>
-    <button @click="linkorder" class ="linkbutton">Bestilling</button>
+    <button @click="linkuser" class ="linkbutton">Bruker webapp</button><br>
+    <button @click="linkemploye" class ="linkbutton">Ansatt webapp</button>
     
     
     <img id="logo2" src="pages/Images/logo.png">
@@ -41,19 +38,14 @@ data(){
             }
     },
     methods: {
-        linkmypage:function(){locationmypage:this.$router.replace({ path: "/myPage" })},
-        linkorder:function(){locationorder:this.$router.replace({ path: "/treatment" })},
+        linkemploye:function(){locationmypage:this.$router.replace({ path: "/logginemploye" })},
+        linkuser:function(){locationorder:this.$router.replace({ path: "/logginuser" })},
         linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
-        setuser:function(){
-            if (userdata.theuser[0] == null){
-                this.user="defaultuser";
-            }else{this.user= userdata.theuser[0].username}
+        
         }
         
-    },
-    beforeMount(){
-        this.setuser()
-     },
+    
+   
     
 };
     export default startPage;
