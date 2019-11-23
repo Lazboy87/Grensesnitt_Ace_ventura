@@ -27,7 +27,7 @@ const startPage ={
     <br>
     </div>
     <h3 @click="createorderdiv"> Mine timer: </h3>
-    <button @click="" id="cancelorder" class ="backbutton">Avbestill En Time</button>
+    <button @click="deleteorder" id="cancelorder" class ="backbutton">Avbestill Time(r)</button>
     <div  id="ordercontainer"></div>
 
    
@@ -90,23 +90,49 @@ data(){
                    "<h5 class=timeH>Tid: "+time+"</h5>"+
                     "<h5 class=dateH>Dato: "+date+"</h5>"+
                     "<div class=delete>"+
-                    "<input class=checkbox value="+id+" type=checkbox id=inp"+id+" name=cancel>"+
-                    "<label for=cancel>Avbestill</label>"+
+                    "<input class=checkbox value="+id+" checked='' type=checkbox id=inp"+id+" name=cancel"+id+">"+
+                    "<label for=cancel"+id+">Avbestill</label>"+
                   "</div>";
-                    
-                    
-                    
-                    console.log( userdata.orders[i].treatment);
+                  
+                  
+                  
+                     console.log( userdata.orders[i].treatment);
                    var appendto=document.getElementById("ordercontainer");
                    console.log(appendto);
                    appendto.appendChild(order);
 
                    }
+                   var unchecked = document.getElementsByClassName("checkbox");
+                  for (var i = 0; i < unchecked.length; i++) {
+                      unchecked[i].checked = false;
+
+                  }
+
+             
 
 
 
 
 
+            },
+            deleteorder:function(){
+                var checkbox = document.getElementsByClassName("checkbox");
+               
+                for (var i = 0; i < checkbox.length; i++) {
+                    if(checkbox[i].checked == true){
+                       var deletethis= checkbox[i]
+                       for (var i = 0; i < userdata.orders.length; i++) {
+                           if(deletethis.value == userdata.orders[i].id){
+                      console.log(deletethis.value);
+                            userdata.orders.splice(i,1);
+                       
+                           
+                           }
+                          
+                       }
+                   }
+                    
+                }
             },
 
            

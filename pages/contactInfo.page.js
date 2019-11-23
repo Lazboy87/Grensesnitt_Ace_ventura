@@ -95,11 +95,17 @@ const contactInfo ={
             confirmorder:function(){
                 
                 var id;
-                for (let i = 0; i < userdata.orders.length; i++) {
-                    id = userdata.orders[i].id +1;
-                    
-                }
-               
+                
+                    id=1;
+                    for (let i = 0; i < userdata.orders.length; i++) {
+                        if(userdata.orders[i].id ==id){
+                        id+=1;}
+                        
+                        
+                    }
+                
+                
+               console.log(id);
                 
                const order={   
 
