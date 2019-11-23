@@ -1,0 +1,45 @@
+
+
+#logginntxtH1{
+    margin:0;
+    
+    
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    text-align: center;
+    padding-top: 0%;
+ }
+
+.loginform,.newuserform {
+text-align: center;
+padding-top: 10%;
+}
+
+
+.loginformfield,.newuserfield {
+    text-align: center;
+    align-self: auto;
+    margin: 3%;
+    width: 75%;
+    height: 30px;
+    border-color: red;
+    border-radius: 5%;
+    font-size: 100%;
+    scale:1;
+}
+
+#subloginn,#newuserbtn{
+    background-color: #A42751;
+    color:#fff ;
+    font-size: 100%;
+}
+
+
+#register,#abort{
+        background-color: #A42751;
+        color:#fff ;
+        font-size: 100%;
+}
+
