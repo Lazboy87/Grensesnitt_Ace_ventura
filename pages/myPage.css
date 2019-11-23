@@ -45,16 +45,81 @@
 }
 
 .delete{
-    position: relative;
-    text-align: center;
-   width: 50px;
-   font-size: 12px;
-   font-weight: 600;
-    
-    margin-top: auto;
-    top:-60px;
-    left:190px;
+    display: block;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  
+  
+ 
 
+  font-size: 13px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+    
+   
+    top:-60px;
+    left:180px;
+    
+    
+    
     
     
 }
+.deletetxt{
+    position:relative;
+    top:30px;
+    color:red;
+    
+}
+
+.checkbox{
+    
+    position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.labelchk{
+  
+    position: absolute;
+    top: 0;
+    right: 20px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: solid red;
+    border-width: 1px;
+    border-radius: 10%;
+}
+.delete input:checked ~ .labelchk {
+    background-color:  #A42751;}
+    
+    
+.labelchk:after {
+        content: "";
+        position: absolute;
+        display: none;}
+
+.delete input:checked ~ .labelchk:after {
+            display: block;
+          }
+
+
+.delete .labelchk:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+

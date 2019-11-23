@@ -1,9 +1,10 @@
 
 
+
 const startPage ={
     template: `
     
-    <div id="container">
+    <div id="container" >
     <link rel="stylesheet" type="text/css" href="pages/myPage.css">
    
     <img id="logo" src="pages/Images/Studentklinikk logo.png">
@@ -27,8 +28,8 @@ const startPage ={
     <br>
     </div>
     <h3 @click="createorderdiv"> Mine timer: </h3>
-    <button @click="deleteorder" id="cancelorder" class ="backbutton">Avbestill Time(r)</button>
-    <div  id="ordercontainer"></div>
+    <button @click="deleteorder" id="cancelorder" class ="backbutton">Avbestill Time</button>
+    <div  id="ordercontainer" ></div>
 
    
     <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
@@ -46,12 +47,17 @@ data(){
         phone:"",
         email:"",
         id:"",
+
+        
             }
     },
     methods: {
-       
+        
         back:function(){locationorder:this.$router.replace({ path: "/startpage" })},
         linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
+
+       
+       
         setuser:function(){
             if (userdata.theuser[0] == null){
                 this.user="defaultuser";
@@ -89,10 +95,10 @@ data(){
                    order.innerHTML = "<h5 class=treatH>Behandling: "+treatment+"</h5>"+
                    "<h5 class=timeH>Tid: "+time+"</h5>"+
                     "<h5 class=dateH>Dato: "+date+"</h5>"+
-                    "<div class=delete>"+
+                    "<label class=delete>"+"<h4 class=deletetxt>Avbestill</h4>"+
                     "<input class=checkbox value="+id+" checked='' type=checkbox id=inp"+id+" name=cancel"+id+">"+
-                    "<label for=cancel"+id+">Avbestill</label>"+
-                  "</div>";
+                    "<span class=labelchk for=cancel"+id+"></span>"+
+                  "</label>";
                   
                   
                   
@@ -115,16 +121,30 @@ data(){
 
 
             },
+            deletediv:function(e){{
+                e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
+            }},
+
+
+
+
             deleteorder:function(){
                 var checkbox = document.getElementsByClassName("checkbox");
                
                 for (var i = 0; i < checkbox.length; i++) {
                     if(checkbox[i].checked == true){
                        var deletethis= checkbox[i]
+                      var iddiv = document.getElementById(deletethis.id);
+                      
+                      
                        for (var i = 0; i < userdata.orders.length; i++) {
                            if(deletethis.value == userdata.orders[i].id){
-                      console.log(deletethis.value);
+                      
                             userdata.orders.splice(i,1);
+                            this.deletediv(iddiv);
+                            
+                            
+                            
                        
                            
                            }
