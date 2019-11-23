@@ -9,7 +9,7 @@ const logginnPage ={
    
     <img id="logo" src="pages/Images/Studentklinikk logo.png">
     
-    <h1 id="logginntxtH1">Logg Inn:</h1>
+    <h1 id="logginntxtH1">Logg inn:</h1>
 
     
     
@@ -20,11 +20,11 @@ const logginnPage ={
         <input class="loginformfield" type="text" v-model="usernameinp" placeholder="Brukernavn" required><br>
         <input class="loginformfield" id="passloginn" type="password" v-model="passwordinp" placeholder="Passord" required><br>
        
-        <input @click="loginn(user)" class="loginformfield" id="subloginn" type="submit" value="Loginn">
+        <input @click="loginn(user)" class="loginformfield" id="subloginn" type="submit" value="Logg inn">
         <br>
         <br>
         <br>
-        <button @click="makenewuser" class="loginformfield" id="newuserbtn">Lag Ny Bruker</button>
+        <button @click="makenewuser" class="loginformfield" id="newuserbtn">Opprett Bruker</button>
         
         </form>
         
