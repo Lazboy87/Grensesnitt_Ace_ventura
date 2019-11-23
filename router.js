@@ -7,6 +7,7 @@ import logginnPageuser from "./pages/logginn.page.js";
 import mypage from "./pages/myPage.page.js";
 import logginnPageEmploye from "./pages/Employelogin.page.js";
 import useremploye from "./pages/useremploye.page.js";
+import PageEmploye from "./pages/employe.page.js"
 
 
 
@@ -23,6 +24,13 @@ import useremploye from "./pages/useremploye.page.js";
                                 
                     path: '/',
                     component: useremploye
+
+                },
+
+                {
+                        
+                    path: '/employe',
+                    component: PageEmploye
 
                 },
        

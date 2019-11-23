@@ -1,0 +1,32 @@
+
+
+
+#logginntxtH2{
+    margin:0;
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    padding-top:10% ;
+    padding-bottom: 10%;
+    text-align: center;
+}
+
+
+.linkbutton{
+    text-align: center;
+    align-self: auto;
+    margin: 3%;
+    width: 75%;
+    height: 30px;
+    border-color: red;
+    border-radius: 5%;
+    font-size: 100%;
+    scale:1;
+    background-color: #A42751;
+    color:#fff ;
+   
+    
+}
+
