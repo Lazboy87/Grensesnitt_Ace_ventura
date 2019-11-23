@@ -108,7 +108,7 @@ const contactInfo ={
                console.log(id);
                 
                const order={   
-
+                        user:this.user,
                         id:id,
                         treatment:this.treatment,
                         date:this.date,
