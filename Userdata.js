@@ -54,10 +54,10 @@ var userdata={
         email:"martin@martin.com",
         Cusername:"martin",
         Cpassword:"martin"},
+],
 
-
-
-        ],
+usernotes:[{user:"",
+            note:""}],
        
         
 };

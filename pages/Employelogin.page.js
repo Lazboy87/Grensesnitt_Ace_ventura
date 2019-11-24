@@ -1,6 +1,6 @@
 
  
-const logginnPage ={
+const logginnPageEmploye ={
     template: `
     
     <div id = "container" >
@@ -15,7 +15,7 @@ const logginnPage ={
     
     
   
-    <div id="logginndiv" v-bind:style="{'display':hidelogin}" >
+    <div id="logginndiv" >
         <form  class="loginform"  >
         
         <input class="loginformfield" type="text" v-model="usernameinp" placeholder="Brukernavn" required><br>
@@ -67,20 +67,22 @@ data(){
                     var passwordchk =false;
                     const password=this.passwordinp;
                     const username=this.usernameinp;
-                    for (var i = 0; i < userdata.users.length; i++) {
+                    for (var i = 0; i < employedata.employe.length; i++) {
 
-                        if(userdata.users[i].Cusername==username && userdata.users[i].Cpassword==password){
+                        if(employedata.employe[i].Eusername==username && employedata.employe[i].Epassword==password){
                             usernamechk = true;
                             passwordchk = true;
-                            const user={firstname:userdata.users[i].firstname,
-                                        lastname:userdata.users[i].lastname,
-                                        phone:userdata.users[i].phone,
-                                        email:userdata.users[i].email,
-                                        username:userdata.users[i].Cusername,
+                            const employe={
+                                        Eid:employedata.employe[i].Eid,
+                                        Efirstname:employedata.employe[i].Efirstname,
+                                        Elastname:employedata.employe[i].Elastname,
+                                        Ephone:employedata.employe[i].Ephone,
+                                        Eemail:employedata.employe[i].Eemail,
+                                        Eusername:employedata.employe[i].Eusername,
                                      
                                         }
-                            userdata.theuser.push(user);
-                           console.log(userdata.theuser);
+                            employedata.setEmploye.push(employe);
+                           console.log(employedata.setEmploye);
                         }
                         
                     }
@@ -104,4 +106,4 @@ data(){
 
 };
     
-    export default logginnPage;
+    export default logginnPageEmploye;
