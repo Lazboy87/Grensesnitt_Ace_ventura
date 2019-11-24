@@ -1,5 +1,5 @@
 #adressebilde img {
-    width: 60%;
+    width: 400px;
     position: relative;
 }
 
@@ -12,7 +12,7 @@
     border: solid #A42751;
     overflow: auto;
 }
-#orderbutton{
+#orderbutton,#tomybutton{
     text-align: center;
     margin:auto;
     
@@ -22,6 +22,9 @@
     text-align: left;
 
 }
+#tomybutton{
+    margin-top:10px;
+    width: 200px;}
 
 #abortConfirm,#confirmOrder{position: relative;}
 #confirmOrder{

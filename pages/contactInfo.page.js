@@ -59,7 +59,7 @@ const contactInfo ={
         <div id="adressebilde"> 
             <img src="pages/Images/adresse.png" alt="adressebilde">
         </div>
-    <button @click="tomypage" class="backbutton" id="orderbutton" type="button">Til Min Side</button>
+    <button @click="tomypage" class="backbutton" id="tomybutton" type="button">Til Min Side</button>
 
  
     
