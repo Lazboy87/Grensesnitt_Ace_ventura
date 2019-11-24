@@ -11,16 +11,6 @@
 }
 
 
-
-#plussyear,#monthpluss{
-    position: relative;
-    top: -120px;
-    left: 215px;
-}
-
-#minusyear{position: relative;
-    top: 3px;}
-
 #yearheader,#monthheader{
     position: relative;
     bottom:40px;
@@ -49,4 +39,25 @@ border-spacing: 20px;
 
     
     
+}
+.arrowpic{
+width: 80px;
+z-index: 100;
+
+
+}
+
+#plussyear,#plussmonth{
+    position: relative;
+    transform: rotate(180deg);
+
+    left:100px;
+    top:-85px;
+}
+#minusyear,#minusmonth{
+    position: relative;
+    
+
+    left:-100px;
+ top:3px;
 }

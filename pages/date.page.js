@@ -16,18 +16,18 @@ template:`
 <div id="datecontainer">
 <H4>Velg år:</H4>
 <div id="yearselector">
-        <button @click="minusyear" id="minusyear" class ="backbutton"><---</button>
+        <img @click="minusyear" id="minusyear" src="pages/Images/arrowleft.png" class="arrowpic">
         <h3 id="yearheader">-{{yearcounter}}-</h3>
        
-        <button @click="plussyear" id="plussyear" class ="backbutton">---></button>
+        <img @click="plussyear" id="plussyear" src="pages/Images/arrowleft.png" class="arrowpic">
 
     </div>
     <H4>Velg en måned:</H4>
     <div id="monthselector">
-        <button @click="minusmonth" id="monthminus" class ="backbutton"><---</button>
+    <img @click="minusmonth" id="minusmonth" src="pages/Images/arrowleft.png" class="arrowpic">
         <h3 id="monthheader">-{{month}}-</h3>
        
-        <button @click="plussmonth" id="monthpluss" class ="backbutton">---></button>
+        <img @click="plussmonth" id="plussmonth" src="pages/Images/arrowleft.png" class="arrowpic">
 </div>
 <H4>Velg en dag:</H4>
     <div id="daycontainer">
@@ -185,7 +185,7 @@ methods:{
 
         this.yearcounter -= 1;
         if(this.yearcounter < 2019 ){
-            this.yearcounter=2019;
+            this.yearcounter=2021;
         }
         
      },
