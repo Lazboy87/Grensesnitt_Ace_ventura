@@ -20,7 +20,8 @@
     margin: auto;
 width: 300px;
 height: 130px;
-overflow: scroll;
+overflow-x: scroll;
+overflow-y: hidden;
 border-spacing: 20px;
 
 
