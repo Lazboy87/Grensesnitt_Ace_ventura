@@ -17,7 +17,6 @@ const contactInfo ={
     <h2> Utfyllende info til klinikken</h2>
     <p> Send oss en melding!</p>
     <textarea id="txtfromuser" v-model="textusr"  placeholder="Skriv her!"></textarea>
-   
     <br>
     
     <button @click="order" class="backbutton" id="orderbutton" type="button"> Bestill </button>
