@@ -16,8 +16,8 @@ var employedata={
         Elastname:"Saxvik",
         Ephone:"9000000",
         Eemail:"andreas@andreas.com",
-        Eusername:"andreas",
-        Epassword:"andreas"},
+        Eusername:"andreasS",
+        Epassword:"andreasS"},
 
         {
         Eid:3,
@@ -27,6 +27,15 @@ var employedata={
         Eemail:"ole@ole.com",
         Eusername:"olenor",
         Epassword:"olenor"},
+
+        {
+            Eid:4,
+            Efirstname:"Martin",
+            Elastname:"Nørholm",
+            Ephone:"9000000",
+            Eemail:"martin@martin.com",
+            Eusername:"martin",
+            Epassword:"martin"},
 
 
         

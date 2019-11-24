@@ -113,6 +113,7 @@ const contactInfo ={
             confirmorder:function(){
                 
                 var id;
+                var doctor;
                 
                     id=1;
                     for (let i = 0; i < userdata.orders.length; i++) {
@@ -121,11 +122,29 @@ const contactInfo ={
                         
                         
                     }
+                    if(this.treatment == "Fysiologisk Testlab"){
+                        doctor = 1;
+                    }
+
+                   
+                    if(this.treatment == "Osteopati"){
+                        doctor = 2;
+                    }
+                   
+                    if(this.treatment == "Akupunktur"){
+                        doctor = 3;
+                    }
+
+
+                    if(this.treatment == "Kostholdsveiledning"){
+                        doctor = 4;
+                    }
                 
                 
                console.log(id);
                 
-               const order={   
+               const order={  
+                        doctor:doctor, 
                         user:this.user,
                         id:id,
                         treatment:this.treatment,

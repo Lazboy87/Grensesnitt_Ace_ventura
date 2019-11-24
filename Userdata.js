@@ -2,6 +2,7 @@
 var userdata={
     theuser:[],
     ordertemp:{
+            doctor:"",
             user:"",
             id:"",
             treatment:"",
@@ -10,6 +11,7 @@ var userdata={
             message:"",},
     
             orders:[{
+        doctor = 3,
         user:"lasse",
         id:1,
         treatment:"Akupunktur",
