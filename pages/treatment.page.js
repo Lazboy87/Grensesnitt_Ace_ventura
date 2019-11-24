@@ -19,22 +19,37 @@ const treatmentPage={
         </div>
             <div v-if="seen" v-on:click="seen = !seen" id="Popup1" class="testPopup">
             <p v-if="seen">
-            Akupunktur
+
 Akupunktur er en persontilpasset behandling der diagnostikk, behandling og oppfølging er skreddersydd for hver pasient med sine unike særtrekk og behov under hvert trinn av behandlingen. 
 
+<br>
+<br>
+
 • Kronisk smerte
-• Migrene og hodepine 
-• Lettere angst og depresjon 
-• Stress 
+<br>
+• Migrene og hodepine
+<br> 
+• Lettere angst og depresjon
+<br> 
+• Stress
+<br> 
 • Allergi
+<br>
 • Kvinners Helse
-• Fordøyelses Problematikk 
-• Søvnproblemer 
+<br>
+• Fordøyelses Problematikk
+<br> 
+• Søvnproblemer
+
+<br> 
+<br>
 
 Enkelt fortalt virker akupunktur ved å stimulere perifere nerver og bindevev som frigjør signalstoffer som har en effekt på det sentrale nervesystemet. Disse signalstoffene regulerer områder i hjernen som blant annet påvirker det autonome nervesystemet.
- 
+<br>
+<br>
 Akupunktøren vil i førstegangskonsultasjonen ha fokus på å få oversikt over symptomer og årsaksforhold. I behandlingen settes tynne nåler i spesifikke punkter på kroppen. I tillegg kan det gis annen behandling, for eksempel kopping-massasje eller varmende behandling. Det gis veiledning om kosthold og fysisk aktivitet når dette er aktuelt. 
-
+<br>
+<br>
 Førstegangskonsultasjon 90 min / Oppfølgende konsultasjon 45min 
 
             </p>
@@ -46,23 +61,35 @@ Førstegangskonsultasjon 90 min / Oppfølgende konsultasjon 45min
         </div>
             <div v-if="seen2" v-on:click="seen2 = !seen2" id="Popup2" class="testPopup">
             <p v-if="seen2">
-            Osteopati
-
+            
 En osteopat undersøker og behandler muskel- og skjelettsmerter med manuelle behandlingsteknikker på benk. Terapeuten fokuserer på å avdekke funksjons- og bevegelsesforstyrrelser som kan være med på å skape smerte. Behandlingen egner seg for pasienter i alle aldre. 
 
-• Nakkesmerter 
+<br>
+<br>
+
+• Nakkesmerter
+<br> 
 • Hodepine
-• Bekkensmerte 
-• Seneplage 
+<br>
+• Bekkensmerte
+<br> 
+• Seneplage
+<br> 
 • Leddplager
+<br>
 • Idrettsplager
- • Belastningsskader 
+<br>
+ • Belastningsskader
+ 
+<br>
+<br>
 
-Osteopati som helseprofesjon 
 Osteopati baseres på vitenskapelige og kliniske fag. En osteopat undersøker og behandler ved hjelp av den biopsykososiale modellen og tar utgangspunkt i at god helse ikke bare er fravær av sykdom, men også et velfungerende muskel- og skjelettsystem. Gjennom osteopatibehandling ønsker en å fremme kroppens evne til å hjelpe seg selv. Behandlingen er trygg og individualisert. 
-
+<br>
+<br>
 Osteopaten vil sammen med deg lage en plan for dine behandlinger, og fortelle hva du kan forvente og hva du selv må ta ansvar for. 
-
+<br>
+<br>
 Førstegangskonsultasjon 90 min / Oppfølgende konsultasjon 45min 
 
             </p>
@@ -74,16 +101,22 @@ Førstegangskonsultasjon 90 min / Oppfølgende konsultasjon 45min
         </div>
             <div v-if="seen3" v-on:click="seen3 = !seen3" id="Popup3" class="testPopup">
             <p v-if="seen3">
-            Fysiologisk testlab
+            
 Høyskolen Kristanias fysiologiske testlaboratorium er et topp moderne laboratorium som brukes til undervisning og forskning.
-
+<br>
+<br>
 Også våre studenter, spesielt de på Bachelor i Fysisk aktivitet og ernæring, har mye undervisning i laboratoriet.
-
+<br>
+<br>
 Testing av egen helse er samtidig både motiverende og gir verdifull informasjon for mange andre. Derfor tilbyr vi tester til deg som ønsker å teste din fysiske tilstand og prestasjonsevne.
-
+<br>
+<br>
 På testlaboratoriet finner vi ut hva status er nå, måler fremgang og gir deg videre råd og tilpasning av mosjon og trening.
+<br>
+<br>
 
 Mer info på: https://kristiania.no/for-publikum/fysiologisk-testlab/
+
  .</p>
             </div>
         
@@ -92,12 +125,14 @@ Mer info på: https://kristiania.no/for-publikum/fysiologisk-testlab/
         <img v-on:click="seen4 = !seen4" class="Images" src="pages/Images/questionmark-noBackground.png"/>
         </div>
             <div v-if="seen4" v-on:click="seen4 = !seen4" id="Popup4" class="testPopup">
-            <p v-if="seen4">Kostholdsveiledning
+            <p v-if="seen4">
 
-            Veiledning passer ypperlig for deg som ønsker å forebygge sykdom, gå ned eller opp i vekt, spise optimalt med tanke på trening og prestasjon, har allergier eller intoleranser som krever tilpasning av kosten eller ønsker å ha et generelt sunt kosthold.
-            
+            Kostholdsveiledning passer ypperlig for deg som ønsker å forebygge sykdom, gå ned eller opp i vekt, spise optimalt med tanke på trening og prestasjon, har allergier eller intoleranser som krever tilpasning av kosten eller ønsker å ha et generelt sunt kosthold.
+            <br>
+            <br>
             Kostveiledningen gjøres av avgangsstudenter som tar en bachelorgrad i ernæring under veiledning av autoriserte kliniske ernæringsfysiologer. 
-            
+            <br>
+            <br>
             Førstegangs konsultasjon 60 min / Oppfølgende konsultasjon 45min 
             </p>
             </div>
