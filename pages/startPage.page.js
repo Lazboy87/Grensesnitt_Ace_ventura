@@ -36,7 +36,7 @@ const startPage ={
    
 data(){ 
    return  {
-     user:"",
+     user:"defaultuser",
 
             }
     },
@@ -46,15 +46,21 @@ data(){
         linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
         setuser:function(){
             window.scrollTo(0,0);
-            if (userdata.theuser[0] == null){
+            for (let i = 0; i < userdata.theuser.length; i++) {
+
+                if (userdata.theuser ==null ){
                 this.user="defaultuser";
-            }else{this.user= userdata.theuser[0].username}
+            }else{this.user= userdata.theuser[i].username}
         }
+    }
         
-    },
-    beforeMount(){
+    
+},
+    
+beforeMount(){
         this.setuser()
-     },
+     
+    },
     
 };
     export default startPage;

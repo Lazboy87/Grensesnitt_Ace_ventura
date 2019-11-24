@@ -1,33 +1,33 @@
 
-var userdata={
-    theuser:[],
-    ordertemp:{
-            id:"",
-            treatment:"",
-            time:"",
-            date:"",
-            message:"",},
-    orders:[{id:1,
-            treatment:"testtreat1",
-                time:"7.30",
-                date:"02.05.2021",
-                message:"this is a test message21"},
-                
-                {       id:2,
-                        treatment:"testtreat4",
-                            time:"9.30",
-                            date:"12.02.2021",
-                            message:"this is a test message21"},
-                            ],
-                            
+var employedata={
+    
+    employe: [{
+        Efirstname:"Lasse",
+        Elastname:"Hovden",
+        Ephone:"9000000",
+        Eemail:"lasse@lasse.com",
+        Eusername:"lasse",
+        Epassword:"lasse"},
 
-    users: [{
-        firstname:"Lasse",
-        lastname:"Hovden",
-        phone:"9000000",
-        email:"lasse@lasse.com",
-        Cusername:"lasse",
-        Cpassword:"lasse"}],
+       {Efirstname:"Andreas",
+        Elastname:"Saxvik",
+        Ephone:"9000000",
+        Eemail:"andreas@andreas.com",
+        Eusername:"andreas",
+        Epassword:"andreas"},
+
+        {Efirstname:"Ole",
+        Elastname:"Nørholm",
+        Ephone:"9000000",
+        Eemail:"ole@ole.com",
+        Eusername:"ole",
+        Epassword:"ole"},
+
+
+
+
+
+],
        
         
 };

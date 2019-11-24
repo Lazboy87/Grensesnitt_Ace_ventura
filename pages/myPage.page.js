@@ -60,18 +60,19 @@ data(){
        
         setuser:function(){
             window.scrollTo(0,0);
-            if (userdata.theuser[0] == null){
+            for (let i = 0; i < userdata.theuser.length; i++) {
+            if (userdata.theuser[i] == null){
                 this.user="defaultuser";
                 this.fullname="";
                 this.phone="";
                 this.email="";
                 
 
-            }else{this.user= userdata.theuser[0].username;
-                this.fullname=userdata.theuser[0].firstname+" "+userdata.theuser[0].lastname;
-                this.phone=userdata.theuser[0].phone;
-                this.email=userdata.theuser[0].email;
-                }},
+            }else{this.user= userdata.theuser[i].username;
+                this.fullname=userdata.theuser[i].firstname+" "+userdata.theuser[i].lastname;
+                this.phone=userdata.theuser[i].phone;
+                this.email=userdata.theuser[i].email;
+                }}},
 
                
 
@@ -84,6 +85,7 @@ data(){
               
                 var order;
                 for (var i = 0; i < userdata.orders.length; i++) {
+                    if(userdata.orders[i].user == this.user){
                     var id=userdata.orders[i].id;
                     
                     var treatment=userdata.orders[i].treatment;
@@ -106,7 +108,7 @@ data(){
                      console.log( userdata.orders[i].treatment);
                    var appendto=document.getElementById("ordercontainer");
                    console.log(appendto);
-                   appendto.appendChild(order);
+                   appendto.appendChild(order);}
 
                    }
                    var unchecked = document.getElementsByClassName("checkbox");

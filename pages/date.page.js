@@ -74,7 +74,7 @@ template:`
 </div>`,
 data(){
     return{
-        user:"",
+        user:"defaultusers",
         monthcounter:1,
         yearcounter:2019,
         month:"Januar",
@@ -199,9 +199,12 @@ methods:{
 
          setuser:function(){
             window.scrollTo(0,0);
-            if (userdata.theuser[0] == null){
+            for (let i = 0; i < userdata.theuser.length; i++) {
+
+                if (userdata.theuser ==null ){
                 this.user="defaultuser";
-            }else{this.user= userdata.theuser[0].username}
+            }else{this.user= userdata.theuser[i].username}
+        }
         }
 
     

@@ -113,7 +113,7 @@ Mer info på: https://kristiania.no/for-publikum/fysiologisk-testlab/
             seen2: false,
             seen3: false,
             seen4: false,
-           user:"",
+           user:"defaultuser",
         }
     },
     methods:{
@@ -126,9 +126,12 @@ Mer info på: https://kristiania.no/for-publikum/fysiologisk-testlab/
         orderKost:function(){userdata.ordertemp.treatment ="Kostholdsveiledning";console.log(userdata.ordertemp.treatment)},
         setuser:function(){
             window.scrollTo(0,0);
-            if (userdata.theuser[0] == null){
+            for (let i = 0; i < userdata.theuser.length; i++) {
+
+                if (userdata.theuser ==null ){
                 this.user="defaultuser";
-            }else{this.user= userdata.theuser[0].username}
+            }else{this.user= userdata.theuser[i].username}
+        }
         },
 
     },

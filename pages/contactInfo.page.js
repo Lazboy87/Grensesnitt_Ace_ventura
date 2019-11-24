@@ -126,9 +126,12 @@ const contactInfo ={
     
         setuser:function(){
             window.scrollTo(0,0);
-        if (userdata.theuser[0] == null){
-            this.user="defaultuser";
-        }else{this.user= userdata.theuser[0].username}
+            for (let i = 0; i < userdata.theuser.length; i++) {
+
+                if (userdata.theuser ==null ){
+                this.user="defaultuser";
+            }else{this.user= userdata.theuser[i].username}
+        }
     },
 
     settime:function(){
