@@ -194,7 +194,7 @@ methods:{
          this.dayvalue = event.srcElement.id;
          this.$router.replace({ path: "/time" });
          userdata.ordertemp.date=this.dayvalue+"."+this.monthvalue+"."+this.yearvalue;
-        alert(userdata.ordertemp.date);
+       
         },
 
          setuser:function(){

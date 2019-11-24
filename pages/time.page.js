@@ -66,7 +66,7 @@ const timePage={
             this.timevalue = event.srcElement.id;
             
             userdata.ordertemp.time=this.timevalue;
-           console.log(userdata.ordertemp.time);
+          
            this.$router.replace({ path: "/contactinfo" });
            },
          
