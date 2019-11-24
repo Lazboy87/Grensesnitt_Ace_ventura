@@ -59,6 +59,7 @@ data(){
        
        
         setuser:function(){
+            window.scrollTo(0,0);
             if (userdata.theuser[0] == null){
                 this.user="defaultuser";
                 this.fullname="";

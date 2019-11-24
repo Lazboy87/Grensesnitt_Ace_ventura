@@ -125,6 +125,7 @@ Mer info på: https://kristiania.no/for-publikum/fysiologisk-testlab/
         orderFyso:function(){userdata.ordertemp.treatment ="Fysiologisk Testlab";console.log(userdata.ordertemp.treatment)},
         orderKost:function(){userdata.ordertemp.treatment ="Kostholdsveiledning";console.log(userdata.ordertemp.treatment)},
         setuser:function(){
+            window.scrollTo(0,0);
             if (userdata.theuser[0] == null){
                 this.user="defaultuser";
             }else{this.user= userdata.theuser[0].username}

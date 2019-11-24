@@ -45,6 +45,7 @@ data(){
         linkorder:function(){locationorder:this.$router.replace({ path: "/treatment" })},
         linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
         setuser:function(){
+            window.scrollTo(0,0);
             if (userdata.theuser[0] == null){
                 this.user="defaultuser";
             }else{this.user= userdata.theuser[0].username}
