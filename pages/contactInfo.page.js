@@ -38,7 +38,7 @@ const contactInfo ={
     
         <button @click="abortorder" class="backbutton" id="abortConfirm">Avbryt</button>
         <button @click="confirmorder" class="backbutton" id="confirmOrder">Bekreft</button>
-        <img id="logo2" src="pages/Images/logo.png">
+     
     
     
     </div>
@@ -65,7 +65,7 @@ const contactInfo ={
     
     </div>
 
-    <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
+    <img @click="back" src="pages/Images/back.png" class ="backimg" v-bind:style="{'display':hideback}"><br>
     
     <img id="logo2" src="pages/Images/logo.png">
 
@@ -80,6 +80,7 @@ const contactInfo ={
         hidecontactinfo:"none",
         hideconfirm:"none",
         hidetxtinfo:"",
+        hideback:"",
         textusr:"",
 
         user:"defaultuser",
@@ -99,6 +100,7 @@ const contactInfo ={
         userdata.ordertemp.message=this.textusr;
         this.hideconfirm="";
         this.hidetxtinfo="none";
+        this.hideback="none";
         userdata.ordertemp.message=this.textusr;
         this.message= userdata.ordertemp.message;},
 
@@ -106,6 +108,7 @@ const contactInfo ={
             
             this.hideconfirm="none";
             this.hidetxtinfo="";
+            this.hideback="";
             },
 
             confirmorder:function(){
@@ -132,6 +135,7 @@ const contactInfo ={
                         message:this.message}
                 this.hideconfirm="none";
                 this.hidetxtinfo="none";
+                this.hideback="none";
                 this.hidecontactinfo="";
                 userdata.orders.push(order);
                 
@@ -144,6 +148,7 @@ const contactInfo ={
                 this.hideconfirm="none";
                 this.hidetxtinfo="";
                 this.hidecontactinfo="none";
+                this.hideback="";
                 this.$router.replace({ path: "/mypage" });
 
              },
