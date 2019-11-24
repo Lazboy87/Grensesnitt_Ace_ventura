@@ -43,10 +43,10 @@ const contactInfo ={
     
     <div id="confirmdiv" v-bind:style="{'display':hideconfirm}">
     <h2>Bekreft Bestilling:</h2>
-    <h4>Behandling:<p>{{treatment}}<p></h4>
-    <h4>Dato:<p>{{date}}<p></h4>
-    <h4>Tidspunkt:<p>{{time}}<p></h4>
-    <h4>Melding til klinikk:<br><p id="messagebox">{{message}}<p></h4>
+    <h4>Behandling:<h5>{{treatment}}</h5></h4>
+    <h4>Dato:<h5>{{date}}</h5></h4>
+    <h4>Tidspunkt:<h5>{{time}}</h5></h4>
+    <h4>Melding til klinikk:<br><h5 id="messagebox">{{message}}</h5></h4>
     
     <button @click="abortorder" class="backbutton" id="abortConfirm">Avbryt</button>
     <button @click="confirmorder" class="backbutton" id="confirmOrder">Bekreft</button>

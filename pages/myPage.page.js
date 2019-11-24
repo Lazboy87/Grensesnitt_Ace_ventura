@@ -54,7 +54,7 @@ data(){
     methods: {
         
         back:function(){locationorder:this.$router.replace({ path: "/startpage" })},
-        linkloggout:function(){locationorder:this.$router.replace({ path: "/" })},
+        linkloggout:function(){locationorder:this.$router.replace({ path: "/logginuser" })},
 
        
        
