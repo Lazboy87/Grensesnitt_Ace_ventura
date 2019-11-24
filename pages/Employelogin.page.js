@@ -88,7 +88,7 @@ data(){
                     }
                     
                     if(usernamechk==true && passwordchk ==true){
-                        this.$router.replace({ path: "/employePage" });
+                        this.$router.replace({ path: "/employe" });
                     
                 }else{
                     alert("Feil Brukernavn eller Passord")}
