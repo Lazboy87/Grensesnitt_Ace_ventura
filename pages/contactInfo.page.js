@@ -11,9 +11,8 @@ const contactInfo ={
     <img id="idimg" src="pages/Images/ID.png">
      <p id="textuser">Bruker:<br>{{user}}</p>
 
-    
-    
-   </div>
+    </div>
+
    <div id="textandinfo" v-bind:style="{'display':hidetxtinfo}">  
     <h2> Utfyllende info til klinikken</h2>
     <p> Send oss en melding!</p>
@@ -22,8 +21,33 @@ const contactInfo ={
     <br>
     
     <button @click="order" class="backbutton" id="orderbutton" type="button"> Bestill </button>
+    
+    </div>
    
 
+    
+ 
+ 
+    
+    <div id="confirmdiv" v-bind:style="{'display':hideconfirm}">
+        <h2>Bekreft Bestilling:</h2>
+        <h4>Behandling:<h5>{{treatment}}</h5></h4>
+        <h4>Dato:<h5>{{date}}</h5></h4>
+        <h4>Tidspunkt:<h5>{{time}}</h5></h4>
+        <h4>Melding til klinikk:<br><h5 id="messagebox">{{message}}</h5></h4>
+    
+        <button @click="abortorder" class="backbutton" id="abortConfirm">Avbryt</button>
+        <button @click="confirmorder" class="backbutton" id="confirmOrder">Bekreft</button>
+        <img id="logo2" src="pages/Images/logo.png">
+    
+    
+    </div>
+
+
+
+    <div id="contactinfo" v-bind:style="{'display':hidecontactinfo}">
+    
+    <h2>Takk for bestilling</h2>
     <h3> Kontaktinformasjon </h3>
    
     <h4> Tlf: </h4>
@@ -32,28 +56,18 @@ const contactInfo ={
     <p> studentklinikken@kristiania.no </p>
     <h4> Adresse: </h4>
     <p> Prinsens gate 9, 0153 Oslo </p>
-    <div id="adressebilde"> 
-        <img src="pages/Images/adresse.png" alt="adressebilde">
-    </div>
+        <div id="adressebilde"> 
+            <img src="pages/Images/adresse.png" alt="adressebilde">
+        </div>
+    <button @click="tomypage" class="backbutton" id="orderbutton" type="button">Til Min Side</button>
+
+ 
     
+    </div>
+
     <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
     
     <img id="logo2" src="pages/Images/logo.png">
-    </div>
-    
-    <div id="confirmdiv" v-bind:style="{'display':hideconfirm}">
-    <h2>Bekreft Bestilling:</h2>
-    <h4>Behandling:<h5>{{treatment}}</h5></h4>
-    <h4>Dato:<h5>{{date}}</h5></h4>
-    <h4>Tidspunkt:<h5>{{time}}</h5></h4>
-    <h4>Melding til klinikk:<br><h5 id="messagebox">{{message}}</h5></h4>
-    
-    <button @click="abortorder" class="backbutton" id="abortConfirm">Avbryt</button>
-    <button @click="confirmorder" class="backbutton" id="confirmOrder">Bekreft</button>
-    <img id="logo2" src="pages/Images/logo.png">
-    
-    
-    </div>
 
 
 </div>
@@ -63,10 +77,12 @@ const contactInfo ={
        
     data(){
        return{
+        hidecontactinfo:"none",
         hideconfirm:"none",
         hidetxtinfo:"",
         textusr:"",
 
+        user:"defaultuser",
         treatment:"",
         time:"",
         date:"",
@@ -115,10 +131,19 @@ const contactInfo ={
                         time:this.time,
                         message:this.message}
                 this.hideconfirm="none";
-                this.hidetxtinfo="";
+                this.hidetxtinfo="none";
+                this.hidecontactinfo="";
                 userdata.orders.push(order);
                 
                 console.log(userdata.orders);
+              
+
+             },
+
+             tomypage:function(){
+                this.hideconfirm="none";
+                this.hidetxtinfo="";
+                this.hidecontactinfo="none";
                 this.$router.replace({ path: "/mypage" });
 
              },

@@ -74,7 +74,7 @@ template:`
 </div>`,
 data(){
     return{
-        user:"defaultusers",
+        user:"defaultuser",
         monthcounter:1,
         yearcounter:2019,
         month:"Januar",

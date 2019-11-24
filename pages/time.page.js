@@ -51,7 +51,7 @@ const timePage={
        
       data(){
          return{
-             
+            user:"defaultuser",
             user:"", 
             timevalue:"",
  

@@ -42,7 +42,7 @@ const startPage ={
 
 data(){ 
     return  {
-        user:"",
+        user:"defaultuser",
         fullname:"",
         phone:"",
         email:"",
