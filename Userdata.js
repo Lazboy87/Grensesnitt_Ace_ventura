@@ -17,7 +17,39 @@ var userdata={
         treatment:"Akupunktur",
         time:"7.30",
         date:"05.06.2020",
-        message:"testmessage",}],
+        message:"testmessage",},
+        {
+            doctor: 2,
+            user:"martin",
+            id:2,
+            treatment:"Osteopati",
+            time:"9.30",
+            date:"25.06.2020",
+            message:"testmessage",},
+
+            {
+                doctor: 1,
+                user:"olenor",
+                id:3,
+                treatment:"Fysiologisk Testlab",
+                time:"9.30",
+                date:"25.06.2020",
+                message:"testmessage",},
+
+                {
+                    doctor: 4,
+                    user:"andreasN",
+                    id:4,
+                    treatment:"Kostholdsveiledning",
+                    time:"12.30",
+                    date:"16.07.2021",
+                    message:"testmessage",},
+        
+    
+    
+    
+    
+    ],
                             
 
     users: [{

@@ -2,7 +2,7 @@
     width: auto;
 }
 
-#empheader{
+#empheader,#departmentheader{
     position: relative;
     top:-200px;
 }
@@ -42,11 +42,13 @@
     border:solid red 1px;
     background-color:  #a42751;
     border-radius: 5%;
+    font-weight:600 ;
     color:#FFFF;
     text-align: center;
+    
    
     
-    display: inline-block;
+   display: inline-block;
 
     z-index: 100;
    }
@@ -54,9 +56,121 @@
        width: 900px;
        height: 500px;
        border:solid #a42751;
-     
+       background: linear-gradient(0deg, #ffffff 40%, #a42751 100%);
+     text-align: center;
        border-radius: 2%;
    }
 
+   .headerincont{
+
+    color: #ffffff;
+
+    position: relative;
+   }
+
+   .orders{
+    width: 250px;
+    height: 70px;
+    text-align: left;
+    border: solid #A42751;
+    background: #FFFFFF;
+    margin-left: auto;
+    margin-right:auto ;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: inline block;
+    overflow: hidden;
+    border-radius: 5%;
+}
+
+.treatH,.timeH,.dateH{
+    margin:5px;
+}
+
+
+#cancelorder{
+    width: 100%;
+    margin-top: -10%;
+    margin-bottom:5%;
+}
+
+.delete{
+    display: block;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  
+  
+ 
+
+  font-size: 13px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+    
+   
+    top:-60px;
+    left:180px;
+    
+    
+    
+    
+    
+}
+.deletetxt{
+    position:relative;
+    top:30px;
+    color:red;
+    
+}
+
+.checkbox{
+    
+    position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.labelchk{
+  
+    position: absolute;
+    top: 0;
+    right: 20px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: solid red;
+    border-width: 1px;
+    border-radius: 10%;
+}
+.delete input:checked ~ .labelchk {
+    background-color:  #A42751;}
+    
+    
+.labelchk:after {
+        content: "";
+        position: absolute;
+        display: none;}
+
+.delete input:checked ~ .labelchk:after {
+            display: block;
+          }
+
+
+.delete .labelchk:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
 
 

@@ -31,7 +31,7 @@ var employedata={
         {
             Eid:4,
             Efirstname:"Martin",
-            Elastname:"Nørholm",
+            Elastname:"Gravdal",
             Ephone:"9000000",
             Eemail:"martin@martin.com",
             Eusername:"martin",
