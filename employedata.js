@@ -38,6 +38,16 @@ var employedata={
             Epassword:"martin"},
 
 
+            {
+                Eid:1,
+        Efirstname:"Andreas",
+        Elastname:"Nagel",
+        Ephone:"9000000",
+        Eemail:"andreas@andreas.com",
+        Eusername:"andreasN",
+        Epassword:"andreasN"},
+
+
         
 
 

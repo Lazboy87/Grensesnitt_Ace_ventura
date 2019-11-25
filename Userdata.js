@@ -35,6 +35,7 @@ var userdata={
                 time:"9.30",
                 date:"25.06.2020",
                 message:"testmessage",},
+                
 
                 {
                     doctor: 4,
@@ -44,6 +45,14 @@ var userdata={
                     time:"12.30",
                     date:"16.07.2021",
                     message:"testmessage",},
+                    {
+                        doctor: 1,
+                        user:"martin",
+                        id:5,
+                        treatment:"Fysiologisk Testlab",
+                        time:"10.30",
+                        date:"25.06.2020",
+                        message:"testmessage",},
         
     
     

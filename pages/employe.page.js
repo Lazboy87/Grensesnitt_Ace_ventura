@@ -16,14 +16,14 @@ const PageEmploye ={
     <h3 id="departmentheader">{{treatment}}</h3>
     <div id="appContainer">
      <div id="menuContainer">
-        <div class="menubutton" id="menuorders" ><p class="menutext">Dine Timer</p></div>
-        <div class="menubutton" id="customerInteraction" ><p class="menutext">Henvendelser</p></div>
-        <div class="menubutton" id="Ahours" ><p class="menutext">Ledige Timer</p></div>
+        <div @click="showYourhours" class="menubutton" id="menuorders" ><p class="menutext">Dine Timer</p></div>
+        <div @click="showIntera" class="menubutton" id="customerInteraction" ><p class="menutext">Henvendelser</p></div>
+        <div @click="showAhours" class="menubutton" id="Ahours" ><p class="menutext">Ledige Timer</p></div>
      </div>
 
      <div class="containerchoise" id="yourhoursContainer" v-bind:style="{'display':hideyourhours}">
      <h3 class="headerincont">Dine timer:{{treatment}}</h3>
-     <div id="userbyorder"></div>
+     <div id="userbyorder" @click="returnorderdiv()"></div>
      
      
      
@@ -32,14 +32,14 @@ const PageEmploye ={
 
 
      <div class="containerchoise"  id="customerinterContainer" v-bind:style="{'display':hidecustomerInteraction}">
-     <h3 class="headerincont">Dine timer</h3>
+     <h3 class="headerincont">Hendvendelser:{{treatment}}</h3>
      
      
      </div>
 
     
      <div class="containerchoise"  id="AhoursContainer" v-bind:style="{'display':hideAhours}">
-     <h3 class="headerincont">Dine timer</h3>
+     <h3 class="headerincont">Ledige timer:{{treatment}}</h3>
      
      
      
@@ -68,6 +68,7 @@ data(){
     hideyourhours:"",
     hidecustomerInteraction:"none",
     hideAhours:"none",
+    orderdiv:"",
 
     treatment:"",
 
@@ -78,6 +79,31 @@ data(){
             }
     },
     methods: {
+
+
+        returnorderdiv:function(e){
+            this.orderdiv = event.srcElement.id;
+            
+            console.log(this.orderdiv);
+           },
+
+
+        showYourhours:function(){
+            this.hideyourhours="";
+        this.hidecustomerInteraction="none";
+        this.hideAhours="none";},
+
+        showAhours:function(){
+            this.hideyourhours="none";
+        this.hidecustomerInteraction="none";
+        this.hideAhours="";},
+
+        showIntera:function(){
+            this.hideyourhours="none";
+        this.hidecustomerInteraction="";
+        this.hideAhours="none";},
+        
+        
         
         setuser:function(){
             window.scrollTo(0,0);
