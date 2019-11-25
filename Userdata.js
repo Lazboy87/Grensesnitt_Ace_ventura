@@ -11,7 +11,7 @@ var userdata={
             message:"",},
     
             orders:[{
-        doctor = 3,
+        doctor: 3,
         user:"lasse",
         id:1,
         treatment:"Akupunktur",
