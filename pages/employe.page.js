@@ -20,7 +20,8 @@ const PageEmploye ={
         <div class="menubutton" id="Ahours" >Ledige Timer</div>
      </div>
 
-     <div id="yourhoursContainer" v-bind:style="{'display':hideyourhours}">
+     <div class="containerchoise" id="yourhoursContainer" v-bind:style="{'display':hideyourhours}">
+     <h3 class="headerincont">Dine timer</h3>
      
      
      
@@ -28,15 +29,15 @@ const PageEmploye ={
      </div>
 
 
-     <div id="customerinterContainer" v-bind:style="{'display':hidecustomerInteraction}">
-     
+     <div class="containerchoise"  id="customerinterContainer" v-bind:style="{'display':hidecustomerInteraction}">
+     <h3 class="headerincont">Dine timer</h3>
      
      
      </div>
 
     
-     <div id="AhoursContainer" v-bind:style="{'display':hideAhours}">
-     
+     <div class="containerchoise"  id="AhoursContainer" v-bind:style="{'display':hideAhours}">
+     <h3 class="headerincont">Dine timer</h3>
      
      
      
@@ -62,7 +63,7 @@ const PageEmploye ={
    
 data(){ 
    return  {
-    hideyourhours:"none",
+    hideyourhours:"",
     hidecustomerInteraction:"none",
     hideAhours:"none"
 
