@@ -40,6 +40,30 @@ const PageEmploye ={
     
      <div class="containerchoise"  id="AhoursContainer" v-bind:style="{'display':hideAhours}">
      <h3 class="headerincont">Ledige timer:{{treatment}}</h3>
+     <div class="timetable">
+         <div @click="returnTime()" tag="div" id="7:30" class="time">7:30</div>
+         <div @click="returnTime()" tag="div" id="8:30" class="time">8:30</div>
+         <div @click="returnTime()" tag="div" id="9:00" class="time">9:00</div>
+         <div @click="returnTime()" tag="div" id="8:00" class="time">8:00</div>
+         <div @click="returnTime()" tag="div" id="9:30" class="time">9:30</div>
+         <div @click="returnTime()" tag="div" id="10:00" class="time">10:00</div>
+         <div @click="returnTime()" tag="div" id="10:30" class="time">10:30</div>
+         <div @click="returnTime()" tag="div" id="11:00" class="time">11:00</div>
+         <div @click="returnTime()" tag="div" id="11:30" class="time">11:30</div>
+         <div @click="returnTime()" tag="div" id="12:00" class="time">12:00</div>
+         <div @click="returnTime()" tag="div" id="12:30" class="time">12:30</div>
+         <div @click="returnTime()" tag="div" id="13:00" class="time">13:00</div>
+         <div @click="returnTime()" tag="div" id="13:30" class="time">13:30</div>
+         <div @click="returnTime()" tag="div" id="14:00" class="time">14:00</div>
+         <div @click="returnTime()" tag="div" id="14:30" class="time">14:30</div>
+         <div @click="returnTime()" tag="div" id="15:00" class="time">15:00</div>
+         <div @click="returnTime()" tag="div" id="15:30" class="time">15:30</div>
+         <div @click="returnTime()" tag="div" id="16:00" class="time">16:00</div>
+         <div @click="returnTime()" tag="div" id="16:30" class="time">16:30</div>
+         <div @click="returnTime()" tag="div" id="17:00" class="time">17:00</div>
+         <div @click="returnTime()" tag="div" id="17:30" class="time">17:30</div>
+         
+      </div>
      
      
      

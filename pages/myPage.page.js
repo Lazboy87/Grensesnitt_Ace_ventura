@@ -142,15 +142,19 @@ data(){
                       
                        for (var i = 0; i < userdata.orders.length; i++) {
                            if(deletethis.value == userdata.orders[i].id){
-                      
+                            for (let i = 0; i < userdata.usernotes.length; i++) {
+                                if(deletethis.value == userdata.usernotes[i].id){
+
+                                    userdata.usernotes[i].status= "canceled";
+                                    console.log(userdata.usernotes);
+                                }
+                                
+                            }
+                            
                             userdata.orders.splice(i,1);
                             this.deletediv(iddiv);
-                            
-                            
-                            
-                       
+                            }
                            
-                           }
                           
                        }
                    }

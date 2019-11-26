@@ -151,12 +151,20 @@ const contactInfo ={
                         date:this.date,
                         time:this.time,
                         message:this.message}
+
+                const note={
+                    status:"", 
+                    user:this.user,
+                    id:id,
+                    messageuser:this.message,
+                    empnote:""}  
                 this.hideconfirm="none";
                 this.hidetxtinfo="none";
                 this.hideback="none";
                 this.hidecontactinfo="";
                 userdata.orders.push(order);
-                
+                userdata.usernotes.push(note);
+                console.log(userdata.usernotes);
                 console.log(userdata.orders);
               
 

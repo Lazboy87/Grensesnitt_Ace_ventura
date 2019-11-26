@@ -52,9 +52,7 @@ var userdata={
                         treatment:"Fysiologisk Testlab",
                         time:"10.30",
                         date:"25.06.2020",
-                        message:"testmessage",},
-        
-    
+                        message:"testmessage",},  
     
     
     
@@ -99,8 +97,7 @@ var userdata={
         Cpassword:"martin"},
 ],
 
-usernotes:[{user:"",
-            note:""}],
+usernotes:[],
        
         
 };
