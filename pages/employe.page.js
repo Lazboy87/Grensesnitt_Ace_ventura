@@ -23,7 +23,7 @@ const PageEmploye ={
 
      <div class="containerchoise" id="yourhoursContainer" v-bind:style="{'display':hideyourhours}">
      <h3 class="headerincont">Dine timer:{{treatment}}</h3>
-     <div id="userbyorder" @click="returnorderdiv()"></div>
+     <div id="userbyorder" @click="returnorderdiv(this.id)"></div>
      
      
      
@@ -106,7 +106,9 @@ data(){
 
 
         returnorderdiv:function(e){
-            this.orderdiv = event.srcElement.id;
+            e=e || window.event;
+            e=e.target || e.srcElement;
+            console.log("ID:"+e.id);
             
             console.log(this.orderdiv);
            },
@@ -167,7 +169,7 @@ data(){
                 order = document.createElement('div');
                 order.setAttribute("class", "orders");
                 order.setAttribute("id", id);
-               order.innerHTML = "<h5 class=treatH>Kunde: "+user+"</h5>"+
+                order.innerHTML = "<h5 class=treatH>Kunde: "+user+"</h5>"+
                "<h5 class=timeH>Tid: "+time+"</h5>"+
                 "<h5 class=dateH>Dato:  "+date+"</h5>"+
                 "<label class=delete>"+"<h4 class=deletetxt>Avbestill</h4>"+
