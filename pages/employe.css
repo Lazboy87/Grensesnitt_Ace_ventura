@@ -92,71 +92,11 @@
     margin-bottom:5%;
 }
 
-.delete{
-    display: block;
-  position: relative;
-  width: 70px;
-  height: 70px;
-  
-  
+
  
 
-  font-size: 13px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-align: center;
-    
-   
-    top:-60px;
-    left:180px;
-    
-    
-    
-    
-    
-}
-.deletetxt{
-    position:relative;
-    top:30px;
-    color:red;
-    
-}
 
-.checkbox{
-    
-    position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
 
-.labelchk{
-  
-    position: absolute;
-    top: 0;
-    right: 20px;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border: solid red;
-    border-width: 1px;
-    border-radius: 10%;
-}
-.delete input:checked ~ .labelchk {
-    background-color:  #A42751;}
-    
-    
-.labelchk:after {
-        content: "";
-        position: absolute;
-        display: none;}
-
-.delete input:checked ~ .labelchk:after {
-            display: block;
-          }
 
 
 .delete .labelchk:after {
@@ -204,4 +144,28 @@
         
         p {
             margin: 6px;
+        }
+
+        .notecont{
+            
+            width: 40px;
+            position: relative;
+            top:-50px;
+            left:190px;
+        }
+
+
+        .note{
+            width: 30px;
+            position: relative;
+           top:-20px;
+           left: 7px;
+        }
+
+        
+        .notetxt{
+            margin: 0;
+            position: relative;
+            top:25px;
+            font-size: 12px;
         }

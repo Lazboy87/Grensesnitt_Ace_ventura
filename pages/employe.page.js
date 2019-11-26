@@ -94,7 +94,7 @@ data(){
     hideAhours:"none",
     orderdiv:"",
 
-    treatment:"",
+    treatment:"Fysiologisk Testlab",
 
     user:"defaultuser"
 
@@ -172,10 +172,9 @@ data(){
                 order.innerHTML = "<h5 class=treatH>Kunde: "+user+"</h5>"+
                "<h5 class=timeH>Tid: "+time+"</h5>"+
                 "<h5 class=dateH>Dato:  "+date+"</h5>"+
-                "<label class=delete>"+"<h4 class=deletetxt>Avbestill</h4>"+
-                "<input class=checkbox value="+id+" checked='' type=checkbox id=inp"+id+" name=cancel"+id+">"+
-                "<span class=labelchk for=cancel"+id+"></span>"+
-              "</label>";
+                "<label class='notecont'>"+"<h4 class=notetxt>Notater</h4>"+
+                "<img class='note' src='pages/Images/note.png' value="+id+" id=note"+id+">"+
+                "</label>";
               
               
               
