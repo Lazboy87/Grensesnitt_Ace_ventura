@@ -97,7 +97,12 @@ var userdata={
         Cpassword:"martin"},
 ],
 
-usernotes:[],
+usernotes:[
+    {status:"", 
+user:"martin",
+id:5,
+messageuser:"trenger hjelp",
+empnote:[]}],
        
         
 };

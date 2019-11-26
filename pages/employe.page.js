@@ -24,6 +24,14 @@ const PageEmploye ={
      <div class="containerchoise" id="yourhoursContainer" v-bind:style="{'display':hideyourhours}">
      <h3 class="headerincont">Dine timer:{{treatment}}</h3>
      <div id="userbyorder" @click="returnorderdiv(this.id)"></div>
+
+     <div id="notediv" v-bind:style="{'display':hidenotediv}">
+     <h2>Notater:</h2>
+     <img @click="closenoteuser" src="pages/Images/X.png" class="ximg" >
+     <img src="pages/Images/addnote.png" class="addnote" >
+     <div id="notecontainer"></div>
+     
+     </div>
      
      
      
@@ -92,11 +100,14 @@ data(){
     hideyourhours:"",
     hidecustomerInteraction:"none",
     hideAhours:"none",
-    orderdiv:"",
+   
+    hidenotediv:"none",
 
     treatment:"Fysiologisk Testlab",
 
-    user:"defaultuser"
+    user:"defaultuser",
+
+    orderid:"",
 
 
 
@@ -104,15 +115,36 @@ data(){
     },
     methods: {
 
+       
+
 
         returnorderdiv:function(e){
             e=e || window.event;
             e=e.target || e.srcElement;
+            console.log("name:"+e.name);
             console.log("ID:"+e.id);
+
+            if(e.name == "note"){
+                this.shownotesuser();
+                this.orderid=e.id;
+                
+
+                console.log(this.orderid);
+
+                
+            }
             
-            console.log(this.orderdiv);
+            
            },
 
+
+           
+
+           closenoteuser:function(){
+               this.hidenotediv="none"
+           },
+           
+           
 
         showYourhours:function(){
             this.hideyourhours="";
@@ -150,7 +182,7 @@ data(){
 
 
         createorderdiv:function(){
-              
+             
             var order;
             for (var i = 0; i < userdata.orders.length; i++) {
                 if(userdata.orders[i].treatment == this.treatment){
@@ -173,7 +205,7 @@ data(){
                "<h5 class=timeH>Tid: "+time+"</h5>"+
                 "<h5 class=dateH>Dato:  "+date+"</h5>"+
                 "<label class='notecont'>"+"<h4 class=notetxt>Notater</h4>"+
-                "<img class='note' src='pages/Images/note.png' value="+id+" id=note"+id+">"+
+                "<img name='note' class='note' src='pages/Images/note.png' id="+id+">"+
                 "</label>";
               
               
@@ -184,13 +216,65 @@ data(){
                appendto.appendChild(order);}
 
                }
-               var unchecked = document.getElementsByClassName("checkbox");
-              for (var i = 0; i < unchecked.length; i++) {
-                  unchecked[i].checked = false;
+              
 
-              }
+              
         
-        }
+        },
+
+
+
+
+        createnotediv:function(){
+            
+            var note;
+            for (var i = 0; i < userdata.usernotes.length; i++) {
+                if(userdata.usernotes[i].id == this.orderid ){
+                    
+                 
+                var id=userdata.usernotes[i].id;
+                console.log(id);
+                var user=userdata.usernotes[i].user;
+                var msguser=userdata.usernotes[i].messageuser;
+                var status=userdata.usernotes[i].status;
+                var empnote=userdata.usernotes[i].empnote;
+
+
+           
+
+              
+
+                note = document.createElement('div');
+                note.setAttribute("class", "orders");
+                note.setAttribute("id", id);
+                note.innerHTML = "<h5 class=treatH>Kunde: "+user+"</h5>"+
+               "<h5 class=timeH>Status: "+status+"</h5>"+
+                "<p class='notetxtuser'>Melding Bruker:"+msguser+"</p>"+
+                "<p class='notetxtdoc'>Melding Behandler:"+empnote+"</p>"
+                ;
+              
+              
+           
+               var appendto2=document.getElementById("notecontainer");
+              
+               appendto2.appendChild(note);}
+
+               }
+              
+
+              
+        
+        },
+
+
+        shownotesuser:function(){
+            this.createnotediv();
+            
+            this.hidenotediv="";
+           
+           
+    
+           },
     },
 
     beforeMount(){
@@ -198,6 +282,7 @@ data(){
        },
        mounted() {
            this.createorderdiv()
+          
            
        }
         

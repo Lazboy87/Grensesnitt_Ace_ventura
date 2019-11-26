@@ -95,22 +95,6 @@
 
  
 
-
-
-
-
-.delete .labelchk:after {
-            left: 9px;
-            top: 5px;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 3px 3px 0;
-            -webkit-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-          }
-
           .timetable {
             margin: auto;
             text-align: center;
@@ -148,6 +132,7 @@
 
         .notecont{
             
+            
             width: 40px;
             position: relative;
             top:-50px;
@@ -160,6 +145,7 @@
             position: relative;
            top:-20px;
            left: 7px;
+          
         }
 
         
@@ -169,3 +155,36 @@
             top:25px;
             font-size: 12px;
         }
+
+        #notediv{
+            position: absolute;
+            width: 900px;
+            height: 650px;
+            border: solid black;
+            top:-90px;
+            background: linear-gradient(0deg, #ffffff 40%, #a42751 100%);
+            border-radius:2% ;
+           
+        }
+        #notecontainer{
+            position: relative;
+            width: 700px;
+            height: 550px;
+            border: solid black;
+            left: 100px;
+            top:-45px;
+            border-radius:2% ;
+            overflow-x: auto;
+
+        }
+        .ximg{
+            position: relative;
+            width: 50px;
+            top:-60px;
+           right:-440px; }
+
+        .addnote{
+            position: relative;
+            width: 50px;
+            top:200px;
+           right:-375px; }
