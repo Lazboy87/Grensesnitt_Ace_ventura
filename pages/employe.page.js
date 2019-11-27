@@ -35,7 +35,7 @@ const PageEmploye ={
      
      <div id="addempnotediv" v-bind:style="{'display':hideaddnotediv}">
      <img @click="closeaddnote" id="ximgempnote" src="pages/Images/X.png" class="ximg" >
-     <textarea id="txtfromemp" v-model="textemp"  placeholder="Skriv her!"></textarea>
+     <textarea id="txtfromemp" v-model="textemp"  placeholder="Skriv behandler notat til ordre her!"></textarea>
      <button @click="addempnote" class="backbutton" id="empnotebutton" type="button"> Legg til</button>
      
      </div>
@@ -58,21 +58,33 @@ const PageEmploye ={
      <div class="containerchoise"  id="AhoursContainer" v-bind:style="{'display':hideAhours}">
      <h3 class="headerincont">Ledige timer:{{treatment}}</h3>
 
-     <select></select>
-     <div class="timetable">
-         <div @click="returnTime()" tag="div" id="7:30" class="time">Tid:7:30<br>Dato:10.01.2020</div>
-         <div @click="returnTime()" tag="div" id="8:30" class="time">Tid:8:30<br>Dato:12.01.2020</div>
-         <div @click="returnTime()" tag="div" id="9:00" class="time">Tid:9:00<br>Dato:15.12.2019</div>
+     
+     <div class="timetable" @click="returndateTime()">
+         <div  tag="div" id="7:30" value="10.01.2020"  class="time">Tid:7:30<br>Dato:10.01.2020</div>
+         <div  tag="div" id="8:30" value="12.01.2020"  class="time">Tid:8:30<br>Dato:12.01.2020</div>
+         <div  tag="div" id="9:00" value="15.12.2019"  class="time">Tid:9:00<br>Dato:15.12.2019</div>
         
-         <div @click="returnTime()" tag="div" id="12:00" class="time">Tid:12:00<br>Dato:01.01.2020</div>
-         <div @click="returnTime()" tag="div" id="12:30" class="time">Tid:12:30<br>Dato:01.01.2020</div>
-         <div @click="returnTime()" tag="div" id="13:00" class="time">Tid:13:00<br>Dato:01.01.2020</div>
-         <div @click="returnTime()" tag="div" id="13:30" class="time">Tid:13:30<br>Dato:01.01.2020</div>
-         <div @click="returnTime()" tag="div" id="14:00" class="time">Tid:14:00<br>Dato:01.01.2020</div>
-         <div @click="returnTime()" tag="div" id="14:30" class="time">Tid:14:30<br>Dato:01.01.2020</div>
-         <div @click="returnTime()" tag="div" id="15:00" class="time">Tid:15:00<br>Dato:01.01.2020</div>
-         <div @click="returnTime()" tag="div" id="15:30" class="time">Tid:15:30<br>Dato:01.01.2020</div>
-         <div @click="returnTime()" tag="div" id="16:00" class="time">Tid:16:00<br>Dato:01.01.2020</div>
+         <div  tag="div" id="12:00" value="16.12.2019"  class="time">Tid:12:00<br>Dato:16.12.2019</div>
+         <div  tag="div" id="12:30" value="06.01.2020"  class="time">Tid:12:30<br>Dato:06.01.2020</div>
+         <div  tag="div" id="13:00" value="07.01.2020"  class="time">Tid:13:00<br>Dato:07.01.2020</div>
+         <div  tag="div" id="13:30" value="08.01.2020"  class="time">Tid:13:30<br>Dato:08.01.2020</div>
+         <div  tag="div" id="14:00" value="10.01.2020"  class="time">Tid:14:00<br>Dato:10.01.2020</div>
+         <div  tag="div" id="14:30" value="01.02.2020"  class="time">Tid:14:30<br>Dato:01.02.2020</div>
+         <div  tag="div" id="15:00" value="14.01.2020"  class="time">Tid:15:00<br>Dato:14.01.2020</div>
+         <div  tag="div" id="15:30" value="18.01.2020"  class="time">Tid:15:30<br>Dato:18.01.2020</div>
+         <div  tag="div" id="16:00" value="19.01.2020"  class="time">Tid:16:00<br>Dato:19.01.2020</div>
+
+         
+         <div id="makeorder" v-bind:style="{'display':hidemakeorder}">
+        
+         <h5>Bruker:<p>{{userchosen}}</p></h5>
+         <h5>Valgt tid:<p>{{selectedTime}}</p></h5>
+         <h5>Valgt dato:<p>{{selecteddate}}</p></h5>
+         <h5>Velg Bruker:<select id="userrendertime" v-model="userchosen"></select></h5>
+         <button @click="addorder" class="backbutton" id="orderbutton" type="button">Sett opp time</button>
+         <button @click="abortord" class="backbutton" id="abortord" type="button">Avslutt</button>
+         
+         </div>
 
       </div>
      
@@ -104,16 +116,22 @@ data(){
     hidecustomerInteraction:"none",
     hideAhours:"none",
     hideaddnotediv:"none",
+    hidemakeorder:"",
    
     hidenotediv:"none",
 
-    treatment:"Fysiologisk Testlab",
+    treatment:"",
 
     user:"defaultuser",
+
+    userchosen:"",
 
     orderid:"",
 
     textemp:"",
+
+    selecteddate:"",
+    selectedTime:"",
 
 
 
@@ -124,6 +142,20 @@ data(){
         deletediv:function(e){{
             e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
         }},
+
+        returndateTime:function(e){
+            e=e || window.event;
+            e=e.target || e.srcElement;
+            var element=document.getElementById(e.id);
+
+            var timeid=e.id;
+            var datevalue = element.getAttribute("value");
+            var classvalue= element.getAttribute("class");
+            this.selecteddate=datevalue;
+            this.selectedTime=timeid;
+            console.log(this.userchosen);
+            console.log(timeid,datevalue,classvalue);
+        },
 
        
 
@@ -153,7 +185,7 @@ data(){
 
 
            addempnote:function(){
-               console.log("funcy");
+               
                var textemp="<br>-"+ this.textemp;
                var idofnote=this.orderid;
                console.log(idofnote);
@@ -322,6 +354,47 @@ data(){
         
         },
 
+        renderuser:function(){
+           
+           
+            var userrender;
+            
+            for (var i = 0; i < userdata.users.length; i++) {
+                
+                    var id=userdata.users[i].id;
+           
+                    var user=userdata.users[i].Cusername;
+
+                    var useract=userdata.users[i].Cusername;
+                   
+
+                    for (let i = 0; i < userdata.users.length; i++) {
+                        if(userdata.users[i].Cusername == user)
+                        user=userdata.users[i].firstname +" "+userdata.users[i].lastname;
+                        
+                    }
+                userrender = document.createElement('OPTION');
+                    userrender.setAttribute("class", "userrend");
+                    userrender.setAttribute("id", id);
+                    userrender.setAttribute("value",user)
+                    userrender.innerHTML = user;
+             
+                ;
+              
+              
+           
+               var appendto3=document.getElementById("userrendertime");
+               var appendto4=document.getElementById("");
+              
+               appendto3.appendChild(userrender);}
+
+               
+              
+
+              
+        
+        },
+
        
 
 
@@ -336,7 +409,8 @@ data(){
         this.setuser()
        },
        mounted() {
-           this.createorderdiv()
+           this.createorderdiv(),
+           this.renderuser()
            
           
            

@@ -241,3 +241,14 @@
                top:50px;
                margin: auto;
            }
+
+
+           #makeorder{
+               width: 800px;
+               height: 500px;
+               position: absolute;
+               border: solid black;
+               bottom: 50px;
+               background-color: #FFFFFF;
+               Left:20px;
+           }
