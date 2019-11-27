@@ -26,9 +26,9 @@ const PageEmploye ={
      <div id="userbyorder" @click="returnorderdiv(this.id)"></div>
 
      <div id="notediv" v-bind:style="{'display':hidenotediv}">
-     <h2>Notater:</h2>
+     <h2 >Notater:</h2>
      <img @click="closenoteuser" src="pages/Images/X.png" class="ximg" >
-     <img src="pages/Images/addnote.png" class="addnote" >
+     <img @click="createnotediv" src="pages/Images/addnote.png" class="addnote" >
      <div id="notecontainer"></div>
      
      </div>
@@ -115,6 +115,10 @@ data(){
     },
     methods: {
 
+        deletediv:function(e){{
+            e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
+        }},
+
        
 
 
@@ -127,6 +131,7 @@ data(){
             if(e.name == "note"){
                 this.shownotesuser();
                 this.orderid=e.id;
+                this.createnotediv();
                 
 
                 console.log(this.orderid);
@@ -141,7 +146,12 @@ data(){
            
 
            closenoteuser:function(){
-               this.hidenotediv="none"
+               this.hidenotediv="none";
+               var cleardiv= document.getElementById("notecontainer");
+               cleardiv.innerHTML="";
+                   
+               
+               
            },
            
            
@@ -226,26 +236,33 @@ data(){
 
 
         createnotediv:function(){
-            
+            var idord=this.orderid;
+            console.log("function");
             var note;
             for (var i = 0; i < userdata.usernotes.length; i++) {
-                if(userdata.usernotes[i].id == this.orderid ){
+                
+
+                if(userdata.usernotes[i].id == idord ){
                     
                  
-                var id=userdata.usernotes[i].id;
-                console.log(id);
-                var user=userdata.usernotes[i].user;
-                var msguser=userdata.usernotes[i].messageuser;
-                var status=userdata.usernotes[i].status;
-                var empnote=userdata.usernotes[i].empnote;
+                    var id=userdata.usernotes[i].id;
+           
+                    var user=userdata.usernotes[i].user;
+                    var msguser=userdata.usernotes[i].messageuser;
+                    var status=userdata.usernotes[i].status;
+                    var empnote=userdata.usernotes[i].empnote;
 
 
            
-
+                    var duplicate= document.getElementsByClassName("notes");
+                    for (var i = 0, l = duplicate.length; i < l; i++) {
+                        var iddiv = duplicate[i].id;
+                        if(iddiv == id){return;}
+                    }
               
 
                 note = document.createElement('div');
-                note.setAttribute("class", "orders");
+                note.setAttribute("class", "notes");
                 note.setAttribute("id", id);
                 note.innerHTML = "<h5 class=treatH>Kunde: "+user+"</h5>"+
                "<h5 class=timeH>Status: "+status+"</h5>"+
@@ -268,13 +285,10 @@ data(){
 
 
         shownotesuser:function(){
-            this.createnotediv();
-            
             this.hidenotediv="";
-           
-           
-    
-           },
+            },
+
+            
     },
 
     beforeMount(){
@@ -282,6 +296,7 @@ data(){
        },
        mounted() {
            this.createorderdiv()
+           
           
            
        }
