@@ -27,9 +27,18 @@ const PageEmploye ={
 
      <div id="notediv" v-bind:style="{'display':hidenotediv}">
      <h2 >Notater:</h2>
-     <img @click="closenoteuser" src="pages/Images/X.png" class="ximg" >
-     <img @click="createnotediv" src="pages/Images/addnote.png" class="addnote" >
+     <img @click="closenoteuser" id="ximgnote"  src="pages/Images/X.png" class="ximg" >
+     
+     <img @click="openaddnote" src="pages/Images/addnote.png" class="addnote" >
+     
      <div id="notecontainer"></div>
+     
+     <div id="addempnotediv" v-bind:style="{'display':hideaddnotediv}">
+     <img @click="closeaddnote" id="ximgempnote" src="pages/Images/X.png" class="ximg" >
+     <textarea id="txtfromemp" v-model="textemp"  placeholder="Skriv her!"></textarea>
+     <button @click="addempnote" class="backbutton" id="empnotebutton" type="button"> Legg til</button>
+     
+     </div>
      
      </div>
      
@@ -100,6 +109,7 @@ data(){
     hideyourhours:"",
     hidecustomerInteraction:"none",
     hideAhours:"none",
+    hideaddnotediv:"none",
    
     hidenotediv:"none",
 
@@ -108,6 +118,8 @@ data(){
     user:"defaultuser",
 
     orderid:"",
+
+    textemp:"",
 
 
 
@@ -140,6 +152,25 @@ data(){
             }
             
             
+           },
+
+           closeaddnote:function(){this.hideaddnotediv="none";},
+           openaddnote:function(){this.hideaddnotediv="";},
+
+
+           addempnote:function(){
+               console.log("funcy");
+               var textemp= this.textemp;
+               var idofnote=this.orderid;
+               console.log(idofnote);
+               for (let i = 0; i < userdata.usernotes.length; i++) {
+                   if(userdata.usernotes[i].id == idofnote){
+                    userdata.usernotes[i].empnote.push(textemp);
+                    console.log(textemp);
+
+                   }
+                   
+               }
            },
 
 
@@ -291,6 +322,8 @@ data(){
               
         
         },
+
+        addempnote:function(){},
 
 
         shownotesuser:function(){

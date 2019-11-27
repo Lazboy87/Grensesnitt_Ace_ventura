@@ -180,8 +180,12 @@
         .ximg{
             position: relative;
             width: 50px;
+             }
+
+           #ximgnote{
             top:-60px;
-           right:-440px; }
+            right:-440px;
+           }
 
         .addnote{
             position: relative;
@@ -191,7 +195,7 @@
 
            .notes{
                position: relative;
-               width:100%;
+               width:95%;
                border:solid black;
                text-align: left;
                
@@ -199,4 +203,39 @@
                height: auto;
                overflow: auto;
                word-wrap: break-word
+           }
+
+           #addempnotediv{
+               z-index: 100;
+               width: 300px;
+               height: 300px;
+               border:solid black;
+               position: absolute;
+               bottom: 350px;
+               left:800px;
+               background: linear-gradient(0deg, #ffffff 40%, #a42751 100%);
+           }
+
+           #ximgempnote{
+            position: relative;
+            left:230px;
+            top:-155px;
+            
+
+           }
+
+           #txtfromemp{
+
+            position: relative;
+            left:-25px;
+            top:45px;
+        width: 200px;
+        height: 200px;
+           }
+
+           #empnotebutton{
+            z-index: 100;
+               position: relative;
+               top:50px;
+               margin: auto;
            }

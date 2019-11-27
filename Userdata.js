@@ -103,7 +103,7 @@ user:"martin",
 treatment:"Fysiologisk Testlab",
 id:5,
 messageuser:"trenger hjelprgeargergaeqrgaergeargeargaerg",
-empnote:[]}],
+empnote:["asfasefawef",]}],
        
         
 };
