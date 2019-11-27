@@ -57,29 +57,23 @@ const PageEmploye ={
     
      <div class="containerchoise"  id="AhoursContainer" v-bind:style="{'display':hideAhours}">
      <h3 class="headerincont">Ledige timer:{{treatment}}</h3>
+
+     <select></select>
      <div class="timetable">
-         <div @click="returnTime()" tag="div" id="7:30" class="time">7:30</div>
-         <div @click="returnTime()" tag="div" id="8:30" class="time">8:30</div>
-         <div @click="returnTime()" tag="div" id="9:00" class="time">9:00</div>
-         <div @click="returnTime()" tag="div" id="8:00" class="time">8:00</div>
-         <div @click="returnTime()" tag="div" id="9:30" class="time">9:30</div>
-         <div @click="returnTime()" tag="div" id="10:00" class="time">10:00</div>
-         <div @click="returnTime()" tag="div" id="10:30" class="time">10:30</div>
-         <div @click="returnTime()" tag="div" id="11:00" class="time">11:00</div>
-         <div @click="returnTime()" tag="div" id="11:30" class="time">11:30</div>
-         <div @click="returnTime()" tag="div" id="12:00" class="time">12:00</div>
-         <div @click="returnTime()" tag="div" id="12:30" class="time">12:30</div>
-         <div @click="returnTime()" tag="div" id="13:00" class="time">13:00</div>
-         <div @click="returnTime()" tag="div" id="13:30" class="time">13:30</div>
-         <div @click="returnTime()" tag="div" id="14:00" class="time">14:00</div>
-         <div @click="returnTime()" tag="div" id="14:30" class="time">14:30</div>
-         <div @click="returnTime()" tag="div" id="15:00" class="time">15:00</div>
-         <div @click="returnTime()" tag="div" id="15:30" class="time">15:30</div>
-         <div @click="returnTime()" tag="div" id="16:00" class="time">16:00</div>
-         <div @click="returnTime()" tag="div" id="16:30" class="time">16:30</div>
-         <div @click="returnTime()" tag="div" id="17:00" class="time">17:00</div>
-         <div @click="returnTime()" tag="div" id="17:30" class="time">17:30</div>
-         
+         <div @click="returnTime()" tag="div" id="7:30" class="time">Tid:7:30<br>Dato:10.01.2020</div>
+         <div @click="returnTime()" tag="div" id="8:30" class="time">Tid:8:30<br>Dato:12.01.2020</div>
+         <div @click="returnTime()" tag="div" id="9:00" class="time">Tid:9:00<br>Dato:15.12.2019</div>
+        
+         <div @click="returnTime()" tag="div" id="12:00" class="time">Tid:12:00<br>Dato:01.01.2020</div>
+         <div @click="returnTime()" tag="div" id="12:30" class="time">Tid:12:30<br>Dato:01.01.2020</div>
+         <div @click="returnTime()" tag="div" id="13:00" class="time">Tid:13:00<br>Dato:01.01.2020</div>
+         <div @click="returnTime()" tag="div" id="13:30" class="time">Tid:13:30<br>Dato:01.01.2020</div>
+         <div @click="returnTime()" tag="div" id="14:00" class="time">Tid:14:00<br>Dato:01.01.2020</div>
+         <div @click="returnTime()" tag="div" id="14:30" class="time">Tid:14:30<br>Dato:01.01.2020</div>
+         <div @click="returnTime()" tag="div" id="15:00" class="time">Tid:15:00<br>Dato:01.01.2020</div>
+         <div @click="returnTime()" tag="div" id="15:30" class="time">Tid:15:30<br>Dato:01.01.2020</div>
+         <div @click="returnTime()" tag="div" id="16:00" class="time">Tid:16:00<br>Dato:01.01.2020</div>
+
       </div>
      
      
@@ -160,13 +154,18 @@ data(){
 
            addempnote:function(){
                console.log("funcy");
-               var textemp= this.textemp;
+               var textemp="<br>-"+ this.textemp;
                var idofnote=this.orderid;
                console.log(idofnote);
                for (let i = 0; i < userdata.usernotes.length; i++) {
                    if(userdata.usernotes[i].id == idofnote){
                     userdata.usernotes[i].empnote.push(textemp);
                     console.log(textemp);
+                    var cleardiv= document.getElementById("notecontainer");
+               cleardiv.innerHTML="";
+               this.createnotediv();
+               this.hideaddnotediv="none";
+               this.textemp="";
 
                    }
                    
@@ -323,7 +322,7 @@ data(){
         
         },
 
-        addempnote:function(){},
+       
 
 
         shownotesuser:function(){

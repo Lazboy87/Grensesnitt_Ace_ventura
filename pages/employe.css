@@ -116,7 +116,7 @@
             width: 25%;
             border: 1px solid #464646;
             border-radius: 5px;
-            height: 30px;
+            height: 50px;
             background-color: #A42751;
             cursor: pointer;
             display: inline-block;
@@ -195,6 +195,7 @@
 
            .notes{
                position: relative;
+               margin: auto;
                width:95%;
                border:solid black;
                text-align: left;
@@ -202,7 +203,8 @@
                background: #ffffff;
                height: auto;
                overflow: auto;
-               word-wrap: break-word
+               word-wrap: break-word;
+               border-radius:2%;
            }
 
            #addempnotediv{

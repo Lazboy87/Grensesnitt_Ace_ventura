@@ -103,7 +103,16 @@ user:"martin",
 treatment:"Fysiologisk Testlab",
 id:5,
 messageuser:"trenger hjelprgeargergaeqrgaergeargeargaerg",
-empnote:["asfasefawef",]}],
+empnote:["asfasefawef",]},
+
+{status:"", 
+user:"olenor",
+treatment:"Fysiologisk Testlab",
+id:3,
+messageuser:"trenger hjelprgeargergaeqrgaergeargeargaerg",
+empnote:["asfasefawef",]}
+
+],
        
         
 };
