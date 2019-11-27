@@ -252,6 +252,12 @@ data(){
                     var status=userdata.usernotes[i].status;
                     var empnote=userdata.usernotes[i].empnote;
 
+                    for (let i = 0; i < userdata.users.length; i++) {
+                        if(userdata.users[i].Cusername == user)
+                        user=userdata.users[i].firstname +" "+userdata.users[i].lastname;
+                        
+                    }
+
 
            
                     var duplicate= document.getElementsByClassName("notes");
