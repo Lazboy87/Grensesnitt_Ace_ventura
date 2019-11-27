@@ -100,8 +100,9 @@ var userdata={
 usernotes:[
     {status:"", 
 user:"martin",
+treatment:"Fysiologisk Testlab",
 id:5,
-messageuser:"trenger hjelp",
+messageuser:"trenger hjelprgeargergaeqrgaergeargeargaerg",
 empnote:[]}],
        
         

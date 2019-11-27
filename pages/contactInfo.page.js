@@ -155,6 +155,7 @@ const contactInfo ={
                 const note={
                     status:"", 
                     user:this.user,
+                    treatment:this.treatment,
                     id:id,
                     messageuser:this.message,
                     empnote:""}  

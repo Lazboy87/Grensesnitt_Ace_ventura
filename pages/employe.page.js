@@ -264,10 +264,13 @@ data(){
                 note = document.createElement('div');
                 note.setAttribute("class", "notes");
                 note.setAttribute("id", id);
-                note.innerHTML = "<h5 class=treatH>Kunde: "+user+"</h5>"+
+                note.innerHTML = "<h5 class=timeH>Kunde: "+user+"</h5>"+
                "<h5 class=timeH>Status: "+status+"</h5>"+
-                "<p class='notetxtuser'>Melding Bruker:"+msguser+"</p>"+
-                "<p class='notetxtdoc'>Melding Behandler:"+empnote+"</p>"
+               "<h5 class=timeH>Ordre id: "+id+"</h5>"+
+               "<h5 class=timeH>Melding Bruker: </h5>"+
+                "<p class='notetxtuser'>"+msguser+"</p>"+
+                "<h5 class=timeH>Melding Behandler: </h5>"+
+                "<p class='notetxtdoc'>"+empnote+"</p>"
                 ;
               
               
