@@ -7,7 +7,7 @@ const logginnPage ={
    
     <link rel="stylesheet" href="pages/logginn.css">
    
-    <img id="logo" src="pages/Images/Studentklinikk logo.png">
+    <img id="logo" src="pages/Images/Studentklinikk logo.png" alt="Høyskolen kristiania header logo">
     
     <h1 id="logginntxtH1">Logg inn:</h1>
 
@@ -56,7 +56,7 @@ const logginnPage ={
 
 
     </form>
-    <img id="logo2" src="pages/Images/logo.png">
+    <img id="logo2" src="pages/Images/logo.png" alt="Høyskolen Kristiania footer logo">
 
  </div>
     `,

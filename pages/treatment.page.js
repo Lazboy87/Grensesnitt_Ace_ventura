@@ -2,10 +2,10 @@ const treatmentPage={
     template:` 
     <div id="container">
     <link rel="stylesheet" href="pages/treatment.css">
-    <img id="logo" src="pages/Images/Studentklinikk logo.png">
+    <img id="logo" src="pages/Images/Studentklinikk logo.png" alt="Høyskolen Kristiania header logo">
     
     <div id="iddiv">
-    <img  @click="linkmypage" id="idimg" src="pages/Images/ID.png">
+    <img  @click="linkmypage" id="idimg" src="pages/Images/ID.png" alt="Min side ikon">
      <p id="textuser">Bruker:<br>{{user}}</p>
 
      
@@ -15,7 +15,7 @@ const treatmentPage={
         
         <div @click="orderAku" class="routerContainer">
         <router-link to="/date" class="elLink">Akupunktur</router-link>
-        <img v-on:click="seen = !seen" class="Images" id="img1" src="pages/Images/questionmark-noBackground.png"/>
+        <img v-on:click="seen = !seen" class="Images" id="img1" src="pages/Images/questionmark-noBackground.png" alt="klikkbart spørsmålstegn"/>
         </div>
             <div v-if="seen" v-on:click="seen = !seen" id="Popup1" class="testPopup">
             <p v-if="seen">
@@ -57,7 +57,7 @@ Førstegangskonsultasjon 90 min / Oppfølgende konsultasjon 45min
         
         <div @click="orderOst" class="routerContainer">
         <router-link to="/date" class="elLink">Osteopati</router-link>
-        <img v-on:click="seen2 = !seen2" class="Images" id="img2" src="pages/Images/questionmark-noBackground.png"/>
+        <img v-on:click="seen2 = !seen2" class="Images" id="img2" src="pages/Images/questionmark-noBackground.png" alt="klikkbart spørsmålstegn"/>
         </div>
             <div v-if="seen2" v-on:click="seen2 = !seen2" id="Popup2" class="testPopup">
             <p v-if="seen2">
@@ -97,7 +97,7 @@ Førstegangskonsultasjon 90 min / Oppfølgende konsultasjon 45min
         
         <div @click="orderFyso" class="routerContainer">
         <router-link to="/date" class="elLink">Fysiologisk Testlab</router-link>
-        <img v-on:click="seen3 = !seen3" class="Images" id="img3" src="pages/Images/questionmark-noBackground.png"/>
+        <img v-on:click="seen3 = !seen3" class="Images" id="img3" src="pages/Images/questionmark-noBackground.png" alt="klikkbart spørsmålstegn"/>
         </div>
             <div v-if="seen3" v-on:click="seen3 = !seen3" id="Popup3" class="testPopup">
             <p v-if="seen3">
@@ -122,7 +122,7 @@ Mer info på: https://kristiania.no/for-publikum/fysiologisk-testlab/
         
         <div @click="orderKost" class="routerContainer">
         <router-link to="/date" class="elLink">Kostholdsveiledning</router-link>
-        <img v-on:click="seen4 = !seen4" class="Images" src="pages/Images/questionmark-noBackground.png"/>
+        <img v-on:click="seen4 = !seen4" class="Images" src="pages/Images/questionmark-noBackground.png" alt="klikkbart spørsmålstegn"/>
         </div>
             <div v-if="seen4" v-on:click="seen4 = !seen4" id="Popup4" class="testPopup">
             <p v-if="seen4">
@@ -137,8 +137,8 @@ Mer info på: https://kristiania.no/for-publikum/fysiologisk-testlab/
             </p>
             </div>
            
-            <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
-            <img id="logo2" src="pages/Images/logo.png">
+            <img @click="back" src="pages/Images/back.png" class ="backimg" alt="Tilbake"><br>
+            <img id="logo2" src="pages/Images/logo.png" alt="Høyskolen Kristiania footer logo">
     </div>
     `,
     data(){

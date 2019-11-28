@@ -7,10 +7,10 @@ const startPage ={
     <div id="container" >
     <link rel="stylesheet" type="text/css" href="pages/myPage.css">
    
-    <img id="logo" src="pages/Images/Studentklinikk logo.png">
+    <img id="logo" src="pages/Images/Studentklinikk logo.png" alt="Høyskolen Kristiania header logo">
   
     <div id="iddiv">
-    <img id="idimg" src="pages/Images/ID.png">
+    <img id="idimg" src="pages/Images/ID.png" alt="Min side Ikon">
      <p id="textuser">Bruker:<br>{{user}}</p>
 
     
@@ -32,9 +32,9 @@ const startPage ={
     <div  id="ordercontainer" ></div>
 
    
-    <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
-    <img @click="linkloggout"  id="logoutimg" src="pages/Images/signout.png">
-    <img id="logo2" src="pages/Images/logo.png">
+    <img @click="back" src="pages/Images/back.png" class ="backimg" alt="Tilbake"><br>
+    <img @click="linkloggout"  id="logoutimg" src="pages/Images/signout.png" alt="log ut">
+    <img id="logo2" src="pages/Images/logo.png" alt="Høyskolen Kristiania footer logo">
 
 </div>
     `,

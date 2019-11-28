@@ -3,10 +3,10 @@ template:`
 <div id="container">
 <link rel="stylesheet" type="text/css" href="pages/date.css">
    
-    <img id="logo" src="pages/Images/Studentklinikk logo.png">
+    <img id="logo" src="pages/Images/Studentklinikk logo.png" alt="Høyskolen Kristiania header logo">
   
     <div @click="mypage" id="iddiv">
-    <img id="idimg" src="pages/Images/ID.png">
+    <img id="idimg" src="pages/Images/ID.png" alt="Min side ikon">
      <p id="textuser">Bruker:<br>{{user}}</p>
 
     
@@ -16,18 +16,18 @@ template:`
 <div id="datecontainer">
 <H4>Velg år:</H4>
 <div id="yearselector">
-        <img @click="minusyear" id="minusyear" src="pages/Images/arrowleft.png" class="arrowpic">
+        <img @click="minusyear" id="minusyear" src="pages/Images/arrowleft.png" class="arrowpic" alt="minus år">
         <h3 id="yearheader">-{{yearcounter}}-</h3>
        
-        <img @click="plussyear" id="plussyear" src="pages/Images/arrowleft.png" class="arrowpic">
+        <img @click="plussyear" id="plussyear" src="pages/Images/arrowleft.png" class="arrowpic" alt="pluss år">
 
     </div>
     <H4>Velg en måned:</H4>
     <div id="monthselector">
-    <img @click="minusmonth" id="minusmonth" src="pages/Images/arrowleft.png" class="arrowpic">
+    <img @click="minusmonth" id="minusmonth" src="pages/Images/arrowleft.png" class="arrowpic" alt="minus måned">
         <h3 id="monthheader">-{{month}}-</h3>
        
-        <img @click="plussmonth" id="plussmonth" src="pages/Images/arrowleft.png" class="arrowpic">
+        <img @click="plussmonth" id="plussmonth" src="pages/Images/arrowleft.png" class="arrowpic" alt="pluss måned">
 </div>
 <H4>Velg en dag:</H4>
     <div id="daycontainer">
@@ -67,9 +67,9 @@ template:`
     </div>
  </div>
 
- <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
+ <img @click="back" src="pages/Images/back.png" class ="backimg" alt="Tilbake"><br>
     
-    <img id="logo2" src="pages/Images/logo.png">
+    <img id="logo2" src="pages/Images/logo.png" alt="Høyskolen Kristiania footer logo">
 
 </div>`,
 data(){

@@ -7,9 +7,9 @@ const PageEmploye ={
     <div id = "containerEmp">
     <link rel="stylesheet" href="pages/employe.css">
    
-    <img id="logoEmp" src="pages/Images/Studentklinikk logo.png">
+    <img id="logoEmp" src="pages/Images/Studentklinikk logo.png" alt="logo">
     <div id="iddiv2">
-    <img id="idimg" src="pages/Images/ID.png">
+    <img id="idimg" src="pages/Images/ID.png" alt="Min side ikon">
      <p id="textuser">Bruker:<br>{{user}}</p>
     </div>
     <h1 id="empheader">Ansattsider Studentklinikken</h1>
@@ -27,14 +27,14 @@ const PageEmploye ={
 
      <div id="notediv" v-bind:style="{'display':hidenotediv}">
      <h2 >Notater:</h2>
-     <img @click="closenoteuser" id="ximgnote"  src="pages/Images/X.png" class="ximg" >
+     <img @click="closenoteuser" id="ximgnote"  src="pages/Images/X.png" class="ximg" alt="lukker notat" >
      
-     <img @click="openaddnote" src="pages/Images/addnote.png" class="addnote" >
+     <img @click="openaddnote" src="pages/Images/addnote.png" class="addnote" alt="åpne og add notat" >
      
      <div id="notecontainer"></div>
      
      <div id="addempnotediv" v-bind:style="{'display':hideaddnotediv}">
-     <img @click="closeaddnote" id="ximgempnote" src="pages/Images/X.png" class="ximg" >
+     <img @click="closeaddnote" id="ximgempnote" src="pages/Images/X.png" class="ximg" alt="lukk notat" >
      <textarea id="txtfromemp" v-model="textemp"  placeholder="Skriv behandler notat til ordre her!"></textarea>
      <button @click="addempnote" class="backbutton" id="empnotebutton" type="button"> Legg til</button>
      
@@ -53,7 +53,7 @@ const PageEmploye ={
 
     
     <div id="rendernotes"></div>
-    <img @click="openmakenote1" id="addnoteuser" src="pages/Images/addnote.png" class="addnote" >
+    <img @click="openmakenote1" id="addnoteuser" src="pages/Images/addnote.png" class="addnote" alt="åpne å lage notat" >
     
     <div class="makenotecont" id="addnote1" v-bind:style="{'display':hidemakeusernote1}">
     <h4 id="usernoteH51">Velg Bruker:</h4>

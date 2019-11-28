@@ -4,10 +4,10 @@ const timePage={
    <div id="container">
          <link rel="stylesheet" href="pages/time.css">
       
-         <img id="logo" src="pages/Images/Studentklinikk logo.png">
+         <img id="logo" src="pages/Images/Studentklinikk logo.png" alt="Høyskolen Kristiania header logo">
   
          <div @click="mypage" id="iddiv">
-         <img id="idimg" src="pages/Images/ID.png">
+         <img id="idimg" src="pages/Images/ID.png" alt="Min side Ikon">
           <p id="textuser">Bruker:<br>{{user}}</p>
      
          
@@ -42,8 +42,8 @@ const timePage={
          
       </div>
 
-      <img @click="back" src="pages/Images/back.png" class ="backimg"><br>
-      <img id="logo2" src="pages/Images/logo.png">
+      <img @click="back" src="pages/Images/back.png" class ="backimg" alt="Tilbake"><br>
+      <img id="logo2" src="pages/Images/logo.png" alt="Høyskolen Kristiania footer logo">
    </div>
    `
       ,

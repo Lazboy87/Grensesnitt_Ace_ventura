@@ -8,7 +8,7 @@ const startPage ={
     
     <link rel="stylesheet" href="pages/useremploye.page.css">
     
-    <img id="logo" src="pages/Images/Studentklinikk logo.png">
+    <img id="logo" src="pages/Images/Studentklinikk logo.png" alt="Høyskolen Kristiania header logo">
     
      
    
@@ -23,7 +23,7 @@ const startPage ={
     <button @click="linkemploye" class ="linkbutton">Ansatt webapp</button>
     
     
-    <img id="logo2" src="pages/Images/logo.png">
+    <img id="logo2" src="pages/Images/logo.png" alt="Høyskolen Kristiania footer logo">
   
     
    

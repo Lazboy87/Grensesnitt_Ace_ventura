@@ -7,7 +7,7 @@ const logginnPageEmploye ={
    
     <link rel="stylesheet" href="pages/logginn.css">
    
-    <img id="logo" src="pages/Images/Studentklinikk logo.png">
+    <img id="logo" src="pages/Images/Studentklinikk logo.png" alt="Høyskolen Kristiania header logo">
     <br>
    <br>
     <h2 id="logginntxtH1">Ansatt logg inn:</h2>
@@ -31,7 +31,7 @@ const logginnPageEmploye ={
        
    
       
-    <img id="logo2" src="pages/Images/logo.png">
+    <img id="logo2" src="pages/Images/logo.png" alt="Høyskolen Kristiania footer logo">
 
  </div>
     `,

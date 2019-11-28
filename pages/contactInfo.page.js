@@ -5,10 +5,10 @@ const contactInfo ={
     <link rel="stylesheet" type="text/css" href="pages/contactinfo.css">
 
     
-    <img id="logo" src="pages/Images/Studentklinikk logo.png">
+    <img id="logo" src="pages/Images/Studentklinikk logo.png" alt="Høyskolen Kristiania header logo">
   
     <div @click="mypage" id="iddiv">
-    <img id="idimg" src="pages/Images/ID.png">
+    <img id="idimg" src="pages/Images/ID.png" alt="Min side ikon">
      <p id="textuser">Bruker:<br>{{user}}</p>
 
     </div>
@@ -64,9 +64,9 @@ const contactInfo ={
     
     </div>
 
-    <img @click="back" src="pages/Images/back.png" class ="backimg" v-bind:style="{'display':hideback}"><br>
+    <img @click="back" src="pages/Images/back.png" class ="backimg" alt="Tilbake" v-bind:style="{'display':hideback}"><br>
     
-    <img id="logo2" src="pages/Images/logo.png">
+    <img id="logo2" src="pages/Images/logo.png" alt="Høyskolen Kristiania footer logo">
 
 
 </div>
