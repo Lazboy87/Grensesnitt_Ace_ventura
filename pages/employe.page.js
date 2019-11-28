@@ -58,7 +58,8 @@ const PageEmploye ={
      <div class="containerchoise"  id="AhoursContainer" v-bind:style="{'display':hideAhours}">
      <h3 class="headerincont">Ledige timer:{{treatment}}</h3>
 
-     
+     <h5>Velg Bruker:<select id="userrendertime" v-model="userchosen"></select></h5>
+     <h5>Velg ledig tid og dato:</h5>
      <div class="timetable" @click="returndateTime()">
          <div  tag="div" id="7:30" value="10.01.2020"  class="time">Tid:7:30<br>Dato:10.01.2020</div>
          <div  tag="div" id="8:30" value="12.01.2020"  class="time">Tid:8:30<br>Dato:12.01.2020</div>
@@ -80,9 +81,9 @@ const PageEmploye ={
          <h5>Bruker:<p>{{userchosen}}</p></h5>
          <h5>Valgt tid:<p>{{selectedTime}}</p></h5>
          <h5>Valgt dato:<p>{{selecteddate}}</p></h5>
-         <h5>Velg Bruker:<select id="userrendertime" v-model="userchosen"></select></h5>
-         <button @click="addorder" class="backbutton" id="orderbutton" type="button">Sett opp time</button>
-         <button @click="abortord" class="backbutton" id="abortord" type="button">Avslutt</button>
+         
+         <button @click="" class="backbutton" id="orderbutton" type="button">Sett opp time</button>
+         <button @click="closemakeorder" class="backbutton" id="abortord" type="button">Avslutt</button>
          
          </div>
 
@@ -116,7 +117,7 @@ data(){
     hidecustomerInteraction:"none",
     hideAhours:"none",
     hideaddnotediv:"none",
-    hidemakeorder:"",
+    hidemakeorder:"none",
    
     hidenotediv:"none",
 
@@ -143,6 +144,9 @@ data(){
             e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
         }},
 
+        openmakeorder:function(){this.hidemakeorder=""},
+        closemakeorder:function(){this.hidemakeorder="none"},
+
         returndateTime:function(e){
             e=e || window.event;
             e=e.target || e.srcElement;
@@ -155,6 +159,10 @@ data(){
             this.selectedTime=timeid;
             console.log(this.userchosen);
             console.log(timeid,datevalue,classvalue);
+            if(classvalue =="time"){
+                console.log(classvalue);
+                this.openmakeorder();
+            }
         },
 
        

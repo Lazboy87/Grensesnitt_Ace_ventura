@@ -244,11 +244,15 @@
 
 
            #makeorder{
-               width: 800px;
+               width: 500px;
                height: 500px;
                position: absolute;
                border: solid black;
                bottom: 50px;
                background-color: #FFFFFF;
                Left:20px;
+           }
+
+           #orderbutton,#abortord{
+               margin:auto;
            }
