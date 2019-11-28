@@ -256,7 +256,7 @@ data(){
                         id+=1;
                     for (let i = 0; i < userdata.usernotes.length; i++) {
                         if(userdata.usernotes[i].id == id){
-                            id+=1;
+                            id+=10;
                         }
                         
                     }
