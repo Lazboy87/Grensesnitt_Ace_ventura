@@ -158,7 +158,7 @@ const contactInfo ={
                     treatment:this.treatment,
                     id:id,
                     messageuser:this.message,
-                    empnote:""}  
+                    empnote:[]}  
                 this.hideconfirm="none";
                 this.hidetxtinfo="none";
                 this.hideback="none";

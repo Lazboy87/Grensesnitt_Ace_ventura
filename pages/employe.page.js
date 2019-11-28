@@ -82,7 +82,7 @@ const PageEmploye ={
          <h5>Valgt tid:<p>{{selectedTime}}</p></h5>
          <h5>Valgt dato:<p>{{selecteddate}}</p></h5>
          
-         <button @click="" class="backbutton" id="orderbutton" type="button">Sett opp time</button>
+         <button @click="confirmorder" class="backbutton" id="orderbutton" type="button">Sett opp time</button>
          <button @click="closemakeorder" class="backbutton" id="abortord" type="button">Avslutt</button>
          
          </div>
@@ -124,6 +124,7 @@ data(){
     treatment:"",
 
     user:"defaultuser",
+    docid:"",
 
     userchosen:"",
 
@@ -164,6 +165,48 @@ data(){
                 this.openmakeorder();
             }
         },
+        
+        confirmorder:function(){
+                
+            var id;
+           
+            
+                id=1;
+                for (let i = 0; i < userdata.orders.length; i++) {
+                    if(userdata.orders[i].id ==id){
+                    id+=1;}
+                    
+                    
+                }
+            
+           const order={  
+                    doctor:this.docid, 
+                    user:this.userchosen,
+                    id:id,
+                    treatment:this.treatment,
+                    date:this.selecteddate,
+                    time:this.selectedTime,
+                    message:""}
+
+            const note={
+                status:"", 
+                user:this.userchosen,
+                treatment:this.treatment,
+                id:id,
+                messageuser:this.message,
+                empnote:[]}  
+            
+            this.hidemakeorder="none";
+            userdata.orders.push(order);
+            userdata.usernotes.push(note);
+            console.log(userdata.usernotes);
+            console.log(userdata.orders);
+            var cleardiv= document.getElementById("userbyorder");
+            cleardiv.innerHTML="";
+            this.createorderdiv();
+          
+
+         },
 
        
 
@@ -251,6 +294,7 @@ data(){
                 this.user="defaultuser";
             }else{
                 this.user= employedata.setEmploye[i].Eusername;
+                this.docid=employedata.setEmploye[i].Eid;
                 if(employedata.setEmploye[i].Eid == 1){this.treatment="Fysiologisk Testlab"}
                 if(employedata.setEmploye[i].Eid == 2){this.treatment="Osteopati"}
                 if(employedata.setEmploye[i].Eid == 3){this.treatment="Akupunktur"}
@@ -384,7 +428,7 @@ data(){
                 userrender = document.createElement('OPTION');
                     userrender.setAttribute("class", "userrend");
                     userrender.setAttribute("id", id);
-                    userrender.setAttribute("value",user)
+                    userrender.setAttribute("value",useract)
                     userrender.innerHTML = user;
              
                 ;
