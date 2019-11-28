@@ -57,7 +57,7 @@
        background: linear-gradient(0deg, #ffffff 40%, #a42751 100%);
      text-align: center;
        border-radius: 2%;
-       overflow-x: auto;
+       overflow-x: none;
     
    }
 
@@ -278,3 +278,51 @@
             word-wrap: break-word;
             border-radius:2%;
         }
+
+        .makenotecont{
+            width: 500px;
+            position: absolute;
+        height: 300px;
+    border:solid black;
+    background: #FFFFFF;
+    border-radius:2%;
+    z-index: 100;
+            }
+
+#addnote1,#addnote2{
+   text-align: center;
+    left:500px;
+    top:100px;
+}
+
+#empnotebutton1{
+    position: absolute;
+    left: 300px;
+}
+#abornote1{
+    position: absolute;
+    left:50px;
+}
+#txtfromemp2{
+    position: absolute;
+    top:50px;
+    left:150px;
+    width: 200px;
+    height: 150px;
+}
+#empnotebutton2{position: absolute;
+    left: 300px;
+top:200px}
+
+#abortnote2{
+    position: absolute;
+    left:50px; 
+    top:200px;
+}
+#addnoteuser{
+    top:-350px;
+    width: 50px;
+    left: 350px;
+    z-index: 100;
+    
+}

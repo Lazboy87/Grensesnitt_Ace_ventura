@@ -53,8 +53,23 @@ const PageEmploye ={
 
     
     <div id="rendernotes"></div>
+    <img @click="openmakenote1" id="addnoteuser" src="pages/Images/addnote.png" class="addnote" >
     
+    <div class="makenotecont" id="addnote1" v-bind:style="{'display':hidemakeusernote1}">
+    <h4 id="usernoteH51">Velg Bruker:</h4>
+    <h5 id="usernoteH5">Velg bruker:<select id="userrendernote2" v-model="userchosen"></select></h5>
+    <button @click="openmakenote2" class="backbutton" id="empnotebutton1" type="button">Videre</button>
+    <button @click="closemakenote1" class="backbutton" id="abornote1" type="button">Avslutt</button>
     
+    </div>
+
+    <div class="makenotecont" id="addnote2" v-bind:style="{'display':hidemakeusernote2}">
+    <h4 class="makenoteheader" id="usernoteH52">Skriv notat:</h4>
+    <textarea id="txtfromemp2" v-model="textemp2"  placeholder="Skriv notat til ordre her!"></textarea>
+     <button @click="confirmnote" class="backbutton" id="empnotebutton2" type="button"> Legg til</button>
+     <button @click="closemakenote2" class="backbutton" id="abortnote2" type="button">Avslutt</button>
+    
+    </div>
 
      
      
@@ -124,6 +139,8 @@ data(){
     hideAhours:"none",
     hideaddnotediv:"none",
     hidemakeorder:"none",
+    hidemakeusernote2:"none",
+    hidemakeusernote1:"none",
    
     hidenotediv:"none",
 
@@ -137,6 +154,7 @@ data(){
     orderid:"",
 
     textemp:"",
+    textemp2:"",
 
     selecteddate:"",
     selectedTime:"",
@@ -153,6 +171,15 @@ data(){
 
         openmakeorder:function(){this.hidemakeorder=""},
         closemakeorder:function(){this.hidemakeorder="none"},
+
+
+        openmakenote1:function(){this.hidemakeusernote1=""},
+
+        closemakenote1:function(){this.hidemakeusernote1="none"},
+
+        openmakenote2:function(){this.hidemakeusernote2=""},
+
+        closemakenote2:function(){this.hidemakeusernote2="none"},
 
         returndateTime:function(e){
             e=e || window.event;
@@ -213,6 +240,56 @@ data(){
             cleardiv2.innerHTML="";
             this.createorderdiv();
             this.createnotediv2();
+          
+
+         },
+
+         confirmnote:function(){
+                
+            var text = this.textemp2;
+            var id = 1;
+           
+            
+                
+                for (var i = 0; i < userdata.orders.length; i++) {
+                    if(userdata.orders[i].id == id){
+                        id+=1;
+                    for (let i = 0; i < userdata.usernotes.length; i++) {
+                        if(userdata.usernotes[i].id == id){
+                            id+=1;
+                        }
+                        
+                    }
+                }
+                
+            }
+           
+            
+                
+            
+           
+            const note={
+                status:"", 
+                user:this.userchosen,
+                treatment:this.treatment,
+                id:id,
+                messageuser:this.message,
+                empnote:[text]}  
+            
+           
+            
+            userdata.usernotes.push(note);
+            this.hidemakeusernote2="none";
+            this.hidemakeusernote1="none";
+            
+           
+            var cleardiv2= document.getElementById("rendernotes");
+            cleardiv2.innerHTML="";
+            console.log(userdata.usernotes);
+          
+            this.createnotediv2();
+            this.textemp2 = "";
+            this.userchosen = "";
           
 
          },
@@ -501,9 +578,56 @@ data(){
               
            
                var appendto3=document.getElementById("userrendertime");
-               var appendto4=document.getElementById("");
+             
               
-               appendto3.appendChild(userrender);}
+               appendto3.appendChild(userrender);
+           
+            
+            }
+
+               
+              
+
+              
+        
+        },
+
+        renderuser2:function(){
+           
+           
+            var userrender;
+            
+            for (var i = 0; i < userdata.users.length; i++) {
+                
+                    var id=userdata.users[i].id;
+           
+                    var user=userdata.users[i].Cusername;
+
+                    var useract=userdata.users[i].Cusername;
+                   
+
+                    for (let i = 0; i < userdata.users.length; i++) {
+                        if(userdata.users[i].Cusername == user)
+                        user=userdata.users[i].firstname +" "+userdata.users[i].lastname;
+                        
+                    }
+                userrender = document.createElement('OPTION');
+                    userrender.setAttribute("class", "userrend");
+                    userrender.setAttribute("id", id);
+                    userrender.setAttribute("value",useract)
+                    userrender.innerHTML = user;
+             
+                ;
+              
+              
+           
+               
+               var appendto4=document.getElementById("userrendernote2");
+              
+             
+               appendto4.appendChild(userrender);
+            
+            }
 
                
               
@@ -527,7 +651,8 @@ data(){
        },
        mounted() {
            this.createorderdiv(),
-           this.renderuser()
+           this.renderuser(),
+           this.renderuser2()
           
            
           
