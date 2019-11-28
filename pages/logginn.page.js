@@ -48,7 +48,7 @@ const logginnPage ={
         v-model="Cusername" placeholder="Skriv ditt brukernavn" required><br>
 
         <input class="newuserfield" id="newpassloginn" type="text" 
-        v-model="Cpassword" placeholder="Skriv ditt Passord" required><br>
+        v-model="Cpassword" type="password" placeholder="Skriv ditt Passord" required><br>
 
         <input @click="clickregister" class="newuserfield" id="register" type="submit" value="Registrer"><br>
         

@@ -1,5 +1,6 @@
 #containerEmp{
     width: auto;
+   
 }
 
 #empheader,#departmentheader{
@@ -193,7 +194,7 @@
             top:200px;
            right:-375px; }
 
-           .notes{
+           .notes,.notes2{
                position: relative;
                margin: auto;
                width:95%;
@@ -256,3 +257,24 @@
            #orderbutton,#abortord{
                margin:auto;
            }
+           #rendernotes{
+               margin:auto;
+               width: 500px;
+               border: solid black;
+               height: 400px;
+               overflow-x: auto;
+
+           }
+           .notes2{
+            position: relative;
+            margin: auto;
+            width:400px;
+            border:solid black;
+            text-align: left;
+            
+            background: #ffffff;
+            height: auto;
+            overflow: auto;
+            word-wrap: break-word;
+            border-radius:2%;
+        }

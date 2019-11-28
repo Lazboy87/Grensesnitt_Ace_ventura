@@ -22,7 +22,7 @@ const PageEmploye ={
      </div>
 
      <div class="containerchoise" id="yourhoursContainer" v-bind:style="{'display':hideyourhours}">
-     <h3 class="headerincont">Dine timer:{{treatment}}</h3>
+     <h3 class="headerincont">Dine timer: {{treatment}}</h3>
      <div id="userbyorder" @click="returnorderdiv(this.id)"></div>
 
      <div id="notediv" v-bind:style="{'display':hidenotediv}">
@@ -49,14 +49,20 @@ const PageEmploye ={
 
 
      <div class="containerchoise"  id="customerinterContainer" v-bind:style="{'display':hidecustomerInteraction}">
-     <h3 class="headerincont">Hendvendelser:{{treatment}}</h3>
+     <h3 class="headerincont">Hendvendelser: {{treatment}}</h3>
+
+    
+    <div id="rendernotes"></div>
+    
+    
+
      
      
      </div>
 
     
      <div class="containerchoise"  id="AhoursContainer" v-bind:style="{'display':hideAhours}">
-     <h3 class="headerincont">Ledige timer:{{treatment}}</h3>
+     <h3 class="headerincont">Ledige timer: {{treatment}}</h3>
 
      <h5>Velg Bruker:<select id="userrendertime" v-model="userchosen"></select></h5>
      <h5>Velg ledig tid og dato:</h5>
@@ -203,7 +209,10 @@ data(){
             console.log(userdata.orders);
             var cleardiv= document.getElementById("userbyorder");
             cleardiv.innerHTML="";
+            var cleardiv2= document.getElementById("rendernotes");
+            cleardiv2.innerHTML="";
             this.createorderdiv();
+            this.createnotediv2();
           
 
          },
@@ -280,6 +289,7 @@ data(){
         this.hideAhours="";},
 
         showIntera:function(){
+            this.createnotediv2();
             this.hideyourhours="none";
         this.hidecustomerInteraction="";
         this.hideAhours="none";},
@@ -346,7 +356,62 @@ data(){
         
         },
 
+        createnotediv2:function(){
+            
+            console.log("function");
+            var note;
+            for (var i = 0; i < userdata.usernotes.length; i++) {
+                
 
+                if(userdata.usernotes[i].treatment == this.treatment ){
+                    
+                 
+                    var id=userdata.usernotes[i].id;
+           
+                    var user=userdata.usernotes[i].user;
+                    var msguser=userdata.usernotes[i].messageuser;
+                    var status=userdata.usernotes[i].status;
+                    var empnote=userdata.usernotes[i].empnote;
+
+                    for (let i = 0; i < userdata.users.length; i++) {
+                        if(userdata.users[i].Cusername == user)
+                        user=userdata.users[i].firstname +" "+userdata.users[i].lastname;
+                        
+                    }
+
+
+           
+                    var duplicate= document.getElementsByClassName("notes2");
+                    for (var i = 0, l = duplicate.length; i < l; i++) {
+                        var iddiv = duplicate[i].id;
+                        if(iddiv == id){return;}
+                    }
+              
+
+                note = document.createElement('div');
+                note.setAttribute("class", "notes2");
+                note.setAttribute("id", id);
+                note.innerHTML = "<h5 class=timeH>Kunde: "+user+"</h5>"+
+               "<h5 class=timeH>Status: "+status+"</h5>"+
+               "<h5 class=timeH>Ordre id: "+id+"</h5>"+
+               "<h5 class=timeH>Melding Bruker: </h5>"+
+                "<p class='notetxtuser'>"+msguser+"</p>"+
+                "<h5 class=timeH>Melding Behandler: </h5>"+
+                "<p class='notetxtdoc'>"+empnote+"</p>"
+                ;
+              
+              
+           
+               var appendto5=document.getElementById("rendernotes");
+              
+               appendto5.appendChild(note);}
+
+               }
+              
+
+              
+        
+        },
 
 
         createnotediv:function(){
@@ -463,6 +528,7 @@ data(){
        mounted() {
            this.createorderdiv(),
            this.renderuser()
+          
            
           
            
